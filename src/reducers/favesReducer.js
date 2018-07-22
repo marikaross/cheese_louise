@@ -3,7 +3,7 @@ export const favesReducer = (state = [], action) => {
     case 'ADD_FAVE-CHEESE':
       return [...state, action.cheeseId]
     case 'DELETE_CHEESE':
-      return state.filter(cheese => favorites.cheeseId !== action.cheeseId)
+      return state.filter(cheese => cheese.cheeseId !== action.cheeseId)
     default:
       return state
   }
