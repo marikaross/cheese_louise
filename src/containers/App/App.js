@@ -5,17 +5,14 @@ import { connect } from 'react-redux';
 import { addCheese } from '../../actions';
 
 
-class App extends Component {
+export class App extends Component {
 
-  async componentDidMount() {
-    try {
-    const allCheeseData = await apiCalls.fetchCheese()
-    const cleanCheese = cheeseCleaner(allCheeseData)
-    this.props.addCheese(cleanCheese)
-  } catch (error) {
-      throw new Error (error.message)
+    async componentDidMount () {
+      const allCheeseData = await apiCalls.fetchCheese()
+      const cleanCheese = cheeseCleaner(allCheeseData)
+      this.props.addCheese(cleanCheese)
   }
-  }
+  
 
   render() {
     return (
@@ -26,8 +23,6 @@ class App extends Component {
   }
 }
 
-export default App;
-
 export const mapStateToProps = (state) => ({
   cheese: this.state.cheese
 })
@@ -36,4 +31,4 @@ export const mapDispatchToProps = (dispatch) => ({
   addCheese: (cheeses) => dispatch(addCheese(cheeses)) 
 })
 
-export default
+export default connect(mapDispatchToProps, mapDispatchToProps)(App)
