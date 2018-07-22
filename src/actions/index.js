@@ -1,11 +1,11 @@
 export const addCheese = (cheeses) => ({
     type: 'ADD_CHEESE',
     cheeses
-
 })
 
-export const toggleFaveCheese = () => ({
+export const toggleFaveCheese = (cheeseId) => ({
     type: 'TOGGLE_FAVORITE_CHEESE'
+    cheeseId
 })
 
 export const addFaveCheese = (cheeseId) => ({
