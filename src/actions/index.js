@@ -17,3 +17,18 @@ export const deleteCheese = (cheeseId) => ({
   type: 'DELETE_CHEESE',
   cheeseId
 })
+
+export const isLoading = (bool) => ({
+  type: 'IS_LOADING',
+  isLoading: bool
+})
+
+export const hasErrored = (bool) => ({
+  type: 'HAS_ERRORED',
+  hasErrored: bool
+})
+
+export const cheeseFetchDataSuccess = (cheeses) => ({
+  type: 'CHEESE_FETCH_DATA_SUCCESS',
+  cheeses
+})
