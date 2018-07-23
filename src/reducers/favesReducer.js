@@ -1,9 +1,10 @@
 export const favesReducer = (state = [], action) => {
   switch (action.type) {
-    case 'ADD_FAVE-CHEESE':
-      return [...state, action.cheeseId]
+    case 'ADD_FAVE_CHEESE':
+      return [...state, action.id]
     case 'DELETE_CHEESE':
-      return state.filter(cheese => cheese.cheeseId !== action.cheeseId)
+      const newCheese = state.filter(cheese => cheese !== action.id)
+      return newCheese
     default:
       return state
   }
