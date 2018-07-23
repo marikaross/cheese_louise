@@ -8,14 +8,14 @@ export const toggleFaveCheese = (cheeseId) => ({
     cheeseId
 })
 
-export const addFaveCheese = (cheeseId) => ({
+export const addFaveCheese = (id) => ({
   type: 'ADD_FAVE_CHEESE',
-  cheeseId
+  id
 })
 
-export const deleteCheese = (cheeseId) => ({
+export const deleteCheese = (id) => ({
   type: 'DELETE_CHEESE',
-  cheeseId
+  id
 })
 
 export const isLoading = (bool) => ({
