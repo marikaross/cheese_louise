@@ -1,18 +1,33 @@
 import React from 'react';
-import CheeseCard from '../../components/CheeseCard';
+import { CheeseCard } from '../../components/CheeseCard';
+import { connect } from 'react-redux';
+import { addFaveCheese, deleteCheese } from '../../actions'
 
 export const CheeseContainer = (props) => {
+  const cheeseCards = props.cheeses.map(cheese => {
+  console.log(props)
+    return (
+      <CheeseCard 
+      name={cheese.name}
+      milk={cheese.milk}
+      region={cheese.region}
+      id={cheese.cheeseId}
+      />
+      ); 
+  })
 
-  
-  const card = props.cheeses.map(cheese => 
   return (
-    <CheeseCard 
-      name={cheese}
-      milkType={milk}
-      region={id}
-      key={recordid}
-      isFavorite={isFavorite(cheese.recordid)}
-    />
-    )
-} 
+    (cheeseCards)
   )
+}
+
+export const mapStateToProps = (state) => ({
+  cheeses: state.cheeses
+})
+
+export const mapDispatchToProps = (dispatch) => ({
+  deleteCheese: (cheeseId) => dispatch(deleteCheese(cheeseId)),
+  addFaveCheese: (cheeseId) => dispatch(addFaveCheese(cheeseId))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(CheeseContainer);
