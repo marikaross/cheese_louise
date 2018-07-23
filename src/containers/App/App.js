@@ -1,19 +1,15 @@
 import React, { Component } from 'react';
-import * as apiCalls from '../../helper/api-calls';
 import CheeseContainer from '../CheeseContainer/CheeseContainer';
-import { cheeseCleaner } from '../../helper/cheese-cleaner';
 import { connect } from 'react-redux';
 import { addCheese } from '../../actions';
+import { fetchCheese } from '../../thunks/fetchCheese';
 
 
-export class App extends Component {
 
-    async componentDidMount() {
-      
-      const allCheeseData = await apiCalls.fetchCheese()
-      console.log('hi')
-      const cleanCheese = cheeseCleaner(allCheeseData)
-      this.props.addCheese(cleanCheese)
+export class App extends Component{
+componentDidMount() {
+    const url = 'https://data.opendatasoft.com/api/records/1.0/search/?dataset=frenchcheese%40public&facet=id&facet=cheese&facet=milk'
+    this.props.fetchCheese(url)
   }
   
 
@@ -28,11 +24,15 @@ export class App extends Component {
 }
 
 export const mapStateToProps = (state) => ({
-  cheeses: this.state.cheese
+  cheeses: this.state.cheese,
+  favorites: this.state.favorites,
+  isLoading: this.state.isLoading,
+  hasErrored: this.state.hasErrored
 })
 
 export const mapDispatchToProps = (dispatch) => ({
-  addCheese: (cheeses) => dispatch(addCheese(cheeses)) 
+  addCheese: (cheeses) => dispatch(addCheese(cheeses)), 
+  fetchCheese: (url) => dispatch(fetchCheese(url))
 })
 
 export default connect(mapDispatchToProps, mapDispatchToProps)(App)
