@@ -1,4 +1,5 @@
 import { isLoading, hasErrored, cheeseFetchDataSuccess } from '../actions';
+import { cheeseCleaner } from '../helper/cheese-cleaner';
 
 export const fetchCheese = (url) => {
   return async (dispatch) => {
@@ -10,9 +11,11 @@ export const fetchCheese = (url) => {
         }
         dispatch(isLoading(false))
         const result = await response.json()
-        dispatch(cheeseFetchDataSuccess(result))
+        const cleanCheeses = cheeseCleaner(result)
+        dispatch(cheeseFetchDataSuccess(cleanCheeses))
       } catch (error) {
         dispatch(hasErrored(true))
-      
+      }
   }
+
 }
