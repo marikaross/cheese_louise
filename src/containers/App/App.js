@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import CheeseContainer from '../CheeseContainer/CheeseContainer';
+import Favorites from '../Favorites/Favorites';
+import { Header } from '../Header/Header';
 import { connect } from 'react-redux';
 import { addCheese } from '../../actions';
 import { fetchCheese } from '../../thunks/fetchCheese';
+import { Route, withRouter } from 'react-router-dom';
 
 
 
@@ -16,8 +19,9 @@ componentDidMount() {
   render() {
     return (
       <div className="App">
-        <h1>Cheese-Louise!</h1>
-        <CheeseContainer />
+        <Route path='/' component={Header} />
+        <Route exact path='/' component={CheeseContainer} />
+        <Route exact path='/favorites' component={Favorites} />
       </div>
     );
   }
@@ -35,4 +39,4 @@ export const mapDispatchToProps = (dispatch) => ({
   fetchCheese: (url) => dispatch(fetchCheese(url))
 })
 
-export default connect(mapDispatchToProps, mapDispatchToProps)(App)
+export default withRouter(connect(mapDispatchToProps, mapDispatchToProps)(App))
