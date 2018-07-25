@@ -4,7 +4,7 @@ import './CheeseCard.css'
 export const CheeseCard = (props) => {
   return (
     <article className='CheeseCard' key={props.id}>
-      <img className='cheese-image' src={require('../images/sad-cheese.jpg')} />
+      <img className='cheese-image' src={`https://public.opendatasoft.com/explore/dataset/frenchcheese/files/${props.picture}/300/`} />
       <section className='cheese-info'>
         <h2>{props.name}</h2>
         <h3>Milk-Type: {props.milk}</h3>
@@ -16,4 +16,3 @@ export const CheeseCard = (props) => {
 }
 
 
-// https://public.opendatasoft.com/explore/dataset/frenchcheese/files/9829fd7240102fb426d65264161a9390/300/
