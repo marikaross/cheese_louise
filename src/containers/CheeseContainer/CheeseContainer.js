@@ -5,7 +5,7 @@ import { addFaveCheese, deleteCheese } from '../../actions';
 import './CheeseContainer.css';
 
 export const CheeseContainer = (props) => {
-
+console.log(props)
   const toggleFave = (id) => {
     if(isDuplicate(id)) {
       props.deleteCheese(id)
@@ -23,6 +23,7 @@ export const CheeseContainer = (props) => {
   const cheeseCards = props.cheeses.map(cheese => {
     return (
       <CheeseCard 
+      key={cheese.cheeseId}
       name={cheese.name}
       milk={cheese.milk}
       region={cheese.region}
