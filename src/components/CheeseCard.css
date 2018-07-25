@@ -1,11 +1,32 @@
 .CheeseCard {
-  width: 25%;
-  height: 30%;
-  background-color: #fff;
+  width: 40%;
+  height: 20%;
+  background: #9f8a72;
   opacity: .7;
   margin: 3px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
 .cheese-image {
-  width: 100%;
+  width: 150px;
+  height: 150px;
+}
+
+.cheese-info {
+  flex-direction: column;
+  padding-left: 20px;
+  padding-right: 20px;
+
+}
+
+h2 {
+  font-size: 1.1em;
+}
+
+h3 {
+  font-size: 1em;
 }
