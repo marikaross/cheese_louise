@@ -1,0 +1,11 @@
+.CheeseCard {
+  width: 25%;
+  height: 30%;
+  background-color: #fff;
+  opacity: .7;
+  margin: 3px;
+}
+
+.cheese-image {
+  width: 100%;
+}
