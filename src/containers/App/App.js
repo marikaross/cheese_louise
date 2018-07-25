@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import { addCheese } from '../../actions';
 import { fetchCheese } from '../../thunks/fetchCheese';
 import { Route, withRouter } from 'react-router-dom';
+import './App.css';
 
 
 
