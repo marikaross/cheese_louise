@@ -1,7 +1,8 @@
 import React from 'react';
 import { CheeseCard } from '../../components/CheeseCard';
 import { connect } from 'react-redux';
-import { addFaveCheese, deleteCheese } from '../../actions'
+import { addFaveCheese, deleteCheese } from '../../actions';
+import './CheeseContainer.css';
 
 export const CheeseContainer = (props) => {
 
@@ -33,7 +34,9 @@ export const CheeseContainer = (props) => {
   })
 
   return (
-    (cheeseCards)
+    <div className='cheeseContainer'>
+      {cheeseCards}
+    </div>
   )
 }
 

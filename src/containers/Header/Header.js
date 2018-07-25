@@ -1,13 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
+import './Header.css'
 
 export const Header = (props) => {
 
   return(
       <div className='header'>
-        <NavLink to='/'>Cheese-Louise</NavLink>
-        <NavLink to='/favorites'>Favorites</NavLink>
+        <NavLink className='header-link' to='/'>Cheese-Louise</NavLink>
+        <NavLink className='header-link' to='/favorites'>Favorites</NavLink>
       </div>
     )
 }
