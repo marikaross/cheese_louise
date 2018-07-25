@@ -30,6 +30,7 @@ console.log(props)
       id={cheese.cheeseId}
       toggleFave={toggleFave}
       isFave={false}
+      picture={cheese.picture}
       />
       ); 
   })
