@@ -5,7 +5,6 @@ import { addFaveCheese, deleteCheese } from '../../actions';
 import './CheeseContainer.css';
 
 export const CheeseContainer = (props) => {
-console.log(props)
   const toggleFave = (id) => {
     if(isDuplicate(id)) {
       props.deleteCheese(id)
