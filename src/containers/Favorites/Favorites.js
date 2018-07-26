@@ -35,6 +35,7 @@ export const Favorites = (props) => {
         region={cheese.region}
         id={cheese.cheeseId}
         toggleFave={toggleFave}
+        picture={cheese.picture}
         />
       )
   })
