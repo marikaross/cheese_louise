@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import CheeseContainer from '../CheeseContainer/CheeseContainer';
 import Favorites from '../Favorites/Favorites';
+import CheeseDetails from '../../components/CheeseDetails';
 import { Header } from '../Header/Header';
 import { connect } from 'react-redux';
 import { addCheese } from '../../actions';
@@ -11,28 +12,41 @@ import './App.css';
 
 
 export class App extends Component{
-componentDidMount() {
+
+   async componentDidMount() {
     const url = 'https://data.opendatasoft.com/api/records/1.0/search/?dataset=frenchcheese%40public&facet=id&facet=cheese&facet=milk'
-    this.props.fetchCheese(url)
+    await this.props.fetchCheese(url)
   }
   
 
   render() {
+    console.log(this.props.cheeses)
     return (
       <div className="App">
         <Route path='/' component={Header} />
         <Route exact path='/' component={CheeseContainer} />
         <Route exact path='/favorites' component={Favorites} />
+        <Route exact path='/:cheeseId' render={({ match }) => {
+          const oneCheese = this.props.cheeses.find(cheese => {
+            return cheese.cheeseId === match.params.cheeseId
+          })
+          return (
+            <div>
+              <CheeseDetails {...oneCheese} />
+            </div>
+            )
+        }
+      } />
       </div>
     );
   }
 }
 
 export const mapStateToProps = (state) => ({
-  cheeses: this.state.cheese,
-  favorites: this.state.favorites,
-  isLoading: this.state.isLoading,
-  hasErrored: this.state.hasErrored
+  cheeses: state.cheeses,
+  favorites: state.favorites,
+  isLoading: state.isLoading,
+  hasErrored: state.hasErrored
 })
 
 export const mapDispatchToProps = (dispatch) => ({
@@ -40,4 +54,4 @@ export const mapDispatchToProps = (dispatch) => ({
   fetchCheese: (url) => dispatch(fetchCheese(url))
 })
 
-export default withRouter(connect(mapDispatchToProps, mapDispatchToProps)(App))
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App))
