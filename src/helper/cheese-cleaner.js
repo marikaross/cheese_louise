@@ -4,7 +4,7 @@ export const cheeseCleaner = (cheeseData) => {
     if (cheese.fields.image) {
       picture = cheese.fields.image.id
     } else {
-      picture = null
+      picture = '../images/sad-cheese.jpg'
     }
     return {cheeseId: cheese.recordid,
             name: cheese.fields.cheese,
