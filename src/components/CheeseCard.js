@@ -1,7 +1,19 @@
 import React from 'react';
-import './CheeseCard.css'
+import './CheeseCard.css';
+import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { fetchSummary } from '../thunks/fetchSummary';
+
 
 export const CheeseCard = (props) => {
+
+  const makeUrl = () => {
+    const id = props.id
+    const urlSnippet = props.frenchWiki
+    props.handleFetch(id, urlSnippet)
+
+  }
+
   return (
     <article className='CheeseCard' key={props.id}>
       <img className='cheese-image' src={`https://public.opendatasoft.com/explore/dataset/frenchcheese/files/${props.picture}/300/`} />
@@ -10,9 +22,8 @@ export const CheeseCard = (props) => {
         <h3>Milk-Type: {props.milk}</h3>
         <h3>Region: {props.region}</h3>
         <button onClick={() => props.toggleFave(props.id)}>favorite</button>
+        <Link to={`/${props.id}`} onClick={() => makeUrl()}>See more info</Link>
       </section>
     </article>
     )
 }
-
-
