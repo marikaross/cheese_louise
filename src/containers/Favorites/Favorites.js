@@ -2,6 +2,7 @@ import React from 'react';
 import { CheeseCard } from '../../components/CheeseCard';
 import { connect } from 'react-redux';
 import { addFaveCheese, deleteCheese } from '../../actions';
+import PropTypes from 'prop-types';
 
 
 export const Favorites = (props) => {
@@ -55,5 +56,14 @@ export const mapDispatchToProps = (dispatch) => ({
   deleteCheese: (id) => dispatch(deleteCheese(id)),
   addFaveCheese: (id) => dispatch(addFaveCheese(id))
 })
+
+Favorites.propTypes = {
+  id: PropTypes.string,
+  picture: PropTypes.string,
+  name: PropTypes.string,
+  milk: PropTypes.string,
+  region: PropTypes.string,
+
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(Favorites);
