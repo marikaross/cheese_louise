@@ -2,7 +2,9 @@ import React from 'react';
 import { CheeseCard } from '../../components/CheeseCard';
 import { connect } from 'react-redux';
 import { addFaveCheese, deleteCheese } from '../../actions';
+import { Link } from 'react-router-dom';
 import './CheeseContainer.css';
+import { fetchSummary } from '../../thunks/fetchSummary';
 
 export const CheeseContainer = (props) => {
   const toggleFave = (id) => {
@@ -11,26 +13,33 @@ export const CheeseContainer = (props) => {
     } else {
       props.addFaveCheese(id)
     }
-
   }
 
   const isDuplicate = (id) => {
     return props.favorites.find(favoriteId => favoriteId === id)
   }
 
+  const handleFetch = async (id, urlSnippet) => {
+    console.log(urlSnippet)
+    const url = `https://fr.wikipedia.org/w/api.php?action=opensearch&search=${urlSnippet}&limit=1&format=json`
+    await props.fetchSummary(url, id)
+  }
+
 
   const cheeseCards = props.cheeses.map(cheese => {
     return (
-      <CheeseCard 
-      key={cheese.cheeseId}
-      name={cheese.name}
-      milk={cheese.milk}
-      region={cheese.region}
-      id={cheese.cheeseId}
-      toggleFave={toggleFave}
-      isFave={false}
-      picture={cheese.picture}
-      />
+        <CheeseCard 
+          key={cheese.cheeseId}
+          name={cheese.name}
+          milk={cheese.milk}
+          region={cheese.region}
+          id={cheese.cheeseId}
+          toggleFave={toggleFave}
+          picture={cheese.picture}
+          frenchWiki={cheese.frenchWiki}
+          button={cheese.cheeseId}
+          handleFetch={handleFetch}
+        />
       ); 
   })
 
@@ -48,7 +57,8 @@ export const mapStateToProps = (state) => ({
 
 export const mapDispatchToProps = (dispatch) => ({
   deleteCheese: (id) => dispatch(deleteCheese(id)),
-  addFaveCheese: (id) => dispatch(addFaveCheese(id))
+  addFaveCheese: (id) => dispatch(addFaveCheese(id)),
+  fetchSummary: (summary, id) => dispatch(fetchSummary(summary, id))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(CheeseContainer);

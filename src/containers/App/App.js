@@ -20,7 +20,6 @@ export class App extends Component{
   
 
   render() {
-    console.log(this.props.cheeses)
     return (
       <div className="App">
         <Route path='/' component={Header} />
