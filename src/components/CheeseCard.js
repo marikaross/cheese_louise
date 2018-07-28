@@ -3,6 +3,7 @@ import './CheeseCard.css';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { fetchSummary } from '../thunks/fetchSummary';
+import PropTypes from 'prop-types';
 
 
 export const CheeseCard = (props) => {
@@ -26,4 +27,12 @@ export const CheeseCard = (props) => {
       </section>
     </article>
     )
+}
+
+CheeseCard.propTypes = {
+  id: PropTypes.string,
+  picture: PropTypes.string,
+  name: PropTypes.string,
+  milk: PropTypes.string,
+  region: PropTypes.string
 }
