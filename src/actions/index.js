@@ -32,3 +32,9 @@ export const cheeseFetchDataSuccess = (cheeses) => ({
   type: 'CHEESE_FETCH_DATA_SUCCESS',
   cheeses
 })
+
+export const summaryFetchDataSuccess = (summary, id) => ({
+  type: 'SUMMARY_FETCH_DATA_SUCCESS',
+  id, 
+  summary
+})
