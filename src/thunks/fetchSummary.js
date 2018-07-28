@@ -12,7 +12,6 @@ return async (dispatch) => {
       }
       dispatch(isLoading(false))
       const result = await response.json()
-      console.log(result)
       const cleanSummary = summaryCleaner(result)
       dispatch(summaryFetchDataSuccess(cleanSummary, id))
     } catch (error) {
