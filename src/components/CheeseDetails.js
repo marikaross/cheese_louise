@@ -20,7 +20,7 @@ export const CheeseDetails = ({cheeseId, name, milk, region, summary, picture}) 
 
 CheeseDetails.propTypes = {
   name: PropTypes.string,
-  milk: PropTypes.sting,
+  milk: PropTypes.string,
   region: PropTypes.string,
   summary: PropTypes.string,
   picture: PropTypes.string
