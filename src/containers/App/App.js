@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import CheeseContainer from '../CheeseContainer/CheeseContainer';
 import Favorites from '../Favorites/Favorites';
-import CheeseDetails from '../../components/CheeseDetails';
+import { CheeseDetails } from '../../components/CheeseDetails';
 import { Header } from '../Header/Header';
 import { connect } from 'react-redux';
 import { addCheese } from '../../actions';
