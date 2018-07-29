@@ -28,8 +28,9 @@
       "src/**/*.{js,jsx}",
       "!src/index.js",
       "!src/setupTests.js",
-      "!src/registerServiceWorker.js"
+      "!src/registerServiceWorker.js",
+      "!src/reducers/index.js"
     ]
   }
-  
+
 }
