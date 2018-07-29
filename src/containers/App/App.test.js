@@ -1,6 +1,7 @@
-import App from './App';
+import {App, mapStateToProps, mapDispatchToProps} from './App';
 import React from 'react';
 import { shallow } from 'enzyme';
+import * as action from '../../actions';
 
 describe('App', () => {
   let wrapper
@@ -24,7 +25,7 @@ describe('App', () => {
       favorites={mockFavorites}
       isLoading={mockIsLoading}
       hasErrored={mockHasErrored}
-      addFaveCheese={mockAddCheese}
+      addCheese={mockAddCheese}
       fetchCheese={mockFetchCheese}/>)
   })
 
@@ -36,7 +37,7 @@ describe('App', () => {
       const mockState = {
         cheeses: mockCheeses,
         favorites: mockFavorites,
-        addFaveCheese: mockAddFaveCheese
+        addCheese: mockAddCheese
       }
 
       const expectedProps = {
@@ -47,4 +48,20 @@ describe('App', () => {
       const mappedProps = mapStateToProps(mockState)
       expect(mappedProps).toEqual(expectedProps)
   })
+
+  it('should call dispatch with addCheese', () => {
+      const mockState = {
+        cheeses: mockCheeses,
+        favorites: mockFavorites,
+        addCheese: mockAddCheese,
+        fetchCheese: mockFetchCheese
+      }
+
+      const mockDispatch = jest.fn()
+      const mappedProps = mapDispatchToProps(mockDispatch)
+      const actionToDispatch = action.addCheese({name: 'american'})
+      mappedProps.addCheese({name: 'american'})
+      expect(mockDispatch).toBeCalledWith(actionToDispatch)
+  })
+
 })
