@@ -31,4 +31,20 @@ describe('App', () => {
   it('should match the snapShot', () => {
     expect(wrapper).toMatchSnapshot()
   })
+
+  it('should return an object with a cheeses array and a favorites array', () => {
+      const mockState = {
+        cheeses: mockCheeses,
+        favorites: mockFavorites,
+        addFaveCheese: mockAddFaveCheese
+      }
+
+      const expectedProps = {
+        cheeses: mockCheeses,
+        favorites: mockFavorites
+      }
+
+      const mappedProps = mapStateToProps(mockState)
+      expect(mappedProps).toEqual(expectedProps)
+  })
 })
