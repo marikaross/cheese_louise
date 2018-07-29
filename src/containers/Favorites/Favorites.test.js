@@ -1,6 +1,7 @@
-import { Favorites } from './Favorites';
+import { Favorites, mapDispatchToProps, mapStateToProps } from './Favorites';
 import React from 'react';
 import { shallow } from 'enzyme';
+import * as action from '../../actions';
 
 describe('Favorites', () => {
   let wrapper
@@ -24,5 +25,55 @@ describe('Favorites', () => {
 
   it('should match the snapShot', () => {
     expect(wrapper).toMatchSnapshot()
+  })
+
+  describe('mapStateToProps', () => {
+    it('should return a cheeses array, a favorites array', () => {
+      const mockState = {
+        cheeses: mockCheeses,
+        favorites: mockFavorites,
+        addFaveCheese: mockAddFaveCheese
+      }
+
+      const expectedProps = {
+        cheeses: mockCheeses,
+        favorites: mockFavorites
+      }
+
+      const mappedProps = mapStateToProps(mockState)
+      expect(mappedProps).toEqual(expectedProps)
+    })
+  }) 
+
+  describe('mapDispatchToProps', () => {
+    it('calls dispatch with deleteCheese', () => {
+      const mockState = {
+        cheeses: mockCheeses,
+        favorites: mockFavorites,
+        addFaveCheese: mockAddFaveCheese,
+        deleteCheese: mockDeleteCheese
+      }
+
+      const mockDispatch = jest.fn()
+      const mappedProps = mapDispatchToProps(mockDispatch)
+      const actionToDispatch = action.deleteCheese({id: 5})
+      mappedProps.deleteCheese({id: 5})
+      expect(mockDispatch).toBeCalledWith(actionToDispatch)
+    })
+
+    it('calls dispatch with addFaveCheese', () => {
+       const mockState = {
+        cheeses: mockCheeses,
+        favorites: mockFavorites,
+        addFaveCheese: mockAddFaveCheese,
+        deleteCheese: mockDeleteCheese
+      }
+
+      const mockDispatch = jest.fn()
+      const mappedProps = mapDispatchToProps(mockDispatch)
+      const actionToDispatch = action.addFaveCheese({id: 8})
+      mappedProps.addFaveCheese({id: 8})
+      expect(mockDispatch).toBeCalledWith(actionToDispatch)
+    })
   })
 })
