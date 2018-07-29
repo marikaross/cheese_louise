@@ -1,5 +1,5 @@
 import { fetchSummary } from './fetchSummary';
-import { isLoading, hasErrored, cheeseSummaryDataSuccess } from '../actions';
+import { isLoading, hasErrored, summaryFetchDataSuccess } from '../actions';
 
 describe('fetchSummary' ,() => {
   let mockUrl
@@ -31,14 +31,14 @@ describe('fetchSummary' ,() => {
   expect(mockDispatch).toHaveBeenCalledWith(isLoading(false));
   })
 
-  it('should dispatch cheeseSummaryDataSuccess if all is well', async () => {
-   const mockSummary = [{name: 'cheddar', summary: 'Here is some stuff about cheese'}]
+  it('should dispatch summaryFetchDataSuccess if all is well', async () => {
+   const mockSummary = [{id: 4, summary: 'Here is some stuff about cheese'}]
    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({ok: true, 
-      json: () => Promise.resolve({cheeses: mockCheese})
+      json: () => Promise.resolve({cheeses: mockSummary})
     }))
    const thunk = fetchSummary(mockUrl)
    await thunk(mockDispatch)
-   expect(mockDispatch).toHaveBeenCalledWith(cheeseFetchDataSuccess())
+   expect(mockDispatch).toHaveBeenCalledWith(summaryFetchDataSuccess())
 
    })
 })
