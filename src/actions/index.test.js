@@ -1,7 +1,7 @@
 import * as action from './index';
 
 describe('actions', () => {
-  it('should return a type of 'ADD_CHEESE' with cheeses', () => {
+  it('should return a type of ADD_CHEESE with cheeses', () => {
     const cheeses = []
     const expected = {
       type: 'ADD_CHEESE',
@@ -11,26 +11,28 @@ describe('actions', () => {
     expect(result).toEqual(expected)
   })
 
-  it('should return a type of 'TOGGLE_FAVE_CHEESE'', () => {
+  it('should return a type of TOGGLE_FAVORITE_CHEESE', () => {
+    const cheeseId = 5
     const expected = {
-      type: 'TOGGLE_CHEESE'
+      type: 'TOGGLE_FAVORITE_CHEESE',
+      cheeseId
     }
 
-    const result = action.toggleFaveCheese
+    const result = action.toggleFaveCheese(cheeseId)
     expect(result).toEqual(expected)
   })
 
-  it('should return a type of 'ADD_FAVE_CHEESE' with a cheeseId', (cheeseId) => {
+  it('should return a type of ADD_FAVE_CHEESE with a cheeseId', () => {
     const id = 2
     const expected = {
       type: 'ADD_FAVE_CHEESE',
       id
     }
-    const result = action.AddFaveCheese(id)
+    const result = action.addFaveCheese(id)
     expect(result).toEqual(expected)
   })
 
-    it('should return a type of 'DELETE_CHEESE' with a id', (id) => {
+    it('should return a type of DELETE_CHEESE with a id', () => {
     const id = 2
     const expected = {
       type: 'DELETE_CHEESE',
@@ -40,7 +42,7 @@ describe('actions', () => {
     expect(result).toEqual(expected)
   })
 
-    it('should return a type of 'IS_LOADING' with a boolean value,' (bool) => {
+    it('should return a type of IS_LOADING with a boolean value', () => {
       const isLoading = true
       const expected = {
         type: 'IS_LOADING',
@@ -50,7 +52,7 @@ describe('actions', () => {
       expect(result).toEqual(expected)
     })
 
-    it('should return a type of 'HAS_ERRORED' with a boolean value', (bool) => {
+    it('should return a type of HAS_ERRORED with a boolean value', () => {
       const hasErrored = false
       const expected = {
         type: 'HAS_ERRORED',
@@ -79,5 +81,6 @@ describe('actions', () => {
         summary
       }
       const result = action.summaryFetchDataSuccess(summary, id)
-    })expect(result).toEqual(expected)
-}
+      expect(result).toEqual(expected)
+    })
+})
