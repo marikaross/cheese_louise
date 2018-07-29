@@ -1,9 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-import './Header.css'
+import PropTypes from 'prop-types';
+import './Header.css';
 
-export const Header = (props) => {
+export const Header = () => {
 
   return(
       <div className='header'>
