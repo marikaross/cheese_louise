@@ -12,7 +12,6 @@ export const CheeseCard = (props) => {
     const id = props.id
     const urlSnippet = props.frenchWiki
     props.handleFetch(id, urlSnippet)
-
   }
 
   return (
