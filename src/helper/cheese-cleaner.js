@@ -4,7 +4,7 @@ export const cheeseCleaner = (cheeseData) => {
     if (cheese.fields.image) {
       picture = cheese.fields.image.id
     } else {
-      picture = '../images/sad-cheese.jpg'
+      picture = ''
     }
     return {frenchWiki: cheese.fields.french_page.substring(cheese.fields.french_page.lastIndexOf('/')),
             cheeseId: cheese.recordid,
