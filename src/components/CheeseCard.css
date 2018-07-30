@@ -42,3 +42,11 @@ h3 {
   color: #e9eae4;
   display: block;
 }
+
+button {
+  background-color: #364a75;
+  border: none;
+  color: #e9eae4;
+  font-size: 1.1em;
+  margin: 5px;
+}
