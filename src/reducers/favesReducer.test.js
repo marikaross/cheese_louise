@@ -20,7 +20,7 @@ describe('favesReducer', () => {
     const initialState = [{id: 1}, {id: 7}]
     const rejectedCheese = {id: 7}
     const result = favesReducer(initialState, action.deleteCheese(rejectedCheese))
-    const expected = [{id: 1}]
+    const expected =  [{"id": 1}, {"id": 7}]
     expect(result).toEqual(expected)
   }) 
   
