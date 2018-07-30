@@ -3,6 +3,7 @@ import { CheeseCard } from '../../components/CheeseCard';
 import { connect } from 'react-redux';
 import { addFaveCheese, deleteCheese } from '../../actions';
 import PropTypes from 'prop-types';
+import './Favorites.css'
 
 
 export const Favorites = (props) => {

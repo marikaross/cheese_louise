@@ -9,7 +9,7 @@ export const Header = () => {
   return(
       <div className='header'>
         <NavLink className='header-link' to='/'>Cheese-Louise</NavLink>
-        <NavLink className='header-link' to='/favorites'>Favorites</NavLink>
+        <NavLink className='favorites-link' to='/favorites'>Favorites</NavLink>
       </div>
     )
 }
