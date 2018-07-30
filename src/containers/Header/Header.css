@@ -18,6 +18,7 @@
 
 .favorites-link {
   text-decoration: none;
-  float: right;
-
+  color: #e9eae4;
+  font-size: 1.1em;
+  margin-right: 10px;
 }
