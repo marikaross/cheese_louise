@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { CheeseCard } from '../../components/CheeseCard';
 import { connect } from 'react-redux';
 import { addFaveCheese, deleteCheese } from '../../actions';
@@ -7,26 +7,27 @@ import './CheeseContainer.css';
 import { fetchSummary } from '../../thunks/fetchSummary';
 import PropTypes from 'prop-types'
 
-export const CheeseContainer = (props) => {
-  const toggleFave = (id) => {
-    if(isDuplicate(id)) {
-      props.deleteCheese(id)
+export class CheeseContainer extends Component{
+
+  toggleFave = (id) => {
+    if(this.isDuplicate(id)) {
+      this.props.deleteCheese(id)
     } else {
-      props.addFaveCheese(id)
+      this.props.addFaveCheese(id)
     }
   }
 
-  const isDuplicate = (id) => {
-    return props.favorites.find(favoriteId => favoriteId === id)
+  isDuplicate = (id) => {
+    return this.props.favorites.find(favoriteId => favoriteId === id)
   }
 
-  const handleFetch = async (id, urlSnippet) => {
+  handleFetch = async (id, urlSnippet) => {
     const url = `https://fr.wikipedia.org/w/api.php?action=opensearch&search=${urlSnippet}&limit=1&format=json`
-    await props.fetchSummary(url, id)
+    await this.props.fetchSummary(url, id)
   }
 
 
-  const cheeseCards = props.cheeses.map(cheese => {
+  cheeseCards = () => {return this.props.cheeses.map(cheese => {
     return (
         <CheeseCard 
           key={cheese.cheeseId}
@@ -34,20 +35,24 @@ export const CheeseContainer = (props) => {
           milk={cheese.milk}
           region={cheese.region}
           id={cheese.cheeseId}
-          toggleFave={toggleFave}
+          toggleFave={this.toggleFave}
           picture={cheese.picture}
           frenchWiki={cheese.frenchWiki}
           button={cheese.cheeseId}
-          handleFetch={handleFetch}
+          handleFetch={this.handleFetch}
         />
       ); 
   })
+}
 
-  return (
-    <div className='cheeseContainer'>
-      {cheeseCards}
-    </div>
-  )
+  render() {
+
+    return (
+      <div className='cheeseContainer'>
+        {this.cheeseCards()}
+      </div>
+      ) 
+  }
 }
 
 export const mapStateToProps = (state) => ({

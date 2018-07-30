@@ -1,4 +1,4 @@
-import { cheeseReducer } from './cheeseReducer'
+import { cheeseReducer, isLoading, hasErrored } from './cheeseReducer'
 import * as action from '../actions'
 
 describe('cheeseReducer', () => {
@@ -20,8 +20,28 @@ describe('cheeseReducer', () => {
     const initialState = []
     const cheeses = [{name:'brie'}]
     const expected = [...cheeses]
-    const result =  await cheeseReducer(initialState, action.cheeseFetchDataSuccess())
-    expect(result).toEqual(expected)
+    const result =  await cheeseReducer(initialState, action.cheeseFetchDataSuccess(cheeses))
+    expect(result).toEqual(expected)  
   })
 
+  it('should return a single cheese when the type is SUMMARY_FETCH_DATA_SUCCESS', async () => {
+    const intialState = [{name: 'nacho', id: 7, region: 'swim meets everywhere'}]
+    const expected = [{name: 'nacho', id: 7, region: 'swim meets everywhere', summary: 'this is not real cheese'}]
+    const result = await cheeseReducer(intialState, action.summaryFetchDataSuccess(7, 'this is not real cheese'))
+    expect(result).toEqual(expected)
+  })
+})
+
+describe('isLoading', () => {
+  it('should return a boolean', () => {
+    const expected = false
+    const result = isLoading(false, action.isLoading)
+  })
+})
+
+describe('hasErrored', () => {
+  it('should return a boolean', () => {
+    const expected = false
+    const result = hasErrored(false, action.hasErrored)
+  })
 })

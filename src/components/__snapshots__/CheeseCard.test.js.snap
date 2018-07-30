@@ -26,18 +26,14 @@ ShallowWrapper {
           className="cheese-info"
 >
           <h2 />
-          <h3>
-                    Milk-Type: 
-          </h3>
-          <h3>
-                    Region: 
-          </h3>
           <button
+                    className="fave-button"
                     onClick={[Function]}
           >
                     favorite
           </button>
           <Link
+                    className="details-link"
                     onClick={[Function]}
                     replace={false}
                     to="/undefined"
@@ -69,18 +65,14 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <h2 />,
-            <h3>
-              Milk-Type: 
-</h3>,
-            <h3>
-              Region: 
-</h3>,
             <button
+              className="fave-button"
               onClick={[Function]}
 >
               favorite
 </button>,
             <Link
+              className="details-link"
               onClick={[Function]}
               replace={false}
               to="/undefined"
@@ -108,41 +100,8 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": Array [
-                "Milk-Type: ",
-                undefined,
-              ],
-            },
-            "ref": null,
-            "rendered": Array [
-              "Milk-Type: ",
-              undefined,
-            ],
-            "type": "h3",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                "Region: ",
-                undefined,
-              ],
-            },
-            "ref": null,
-            "rendered": Array [
-              "Region: ",
-              undefined,
-            ],
-            "type": "h3",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
               "children": "favorite",
+              "className": "fave-button",
               "onClick": [Function],
             },
             "ref": null,
@@ -155,6 +114,7 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "children": "See more info",
+              "className": "details-link",
               "onClick": [Function],
               "replace": false,
               "to": "/undefined",
@@ -184,18 +144,14 @@ ShallowWrapper {
             className="cheese-info"
 >
             <h2 />
-            <h3>
-                        Milk-Type: 
-            </h3>
-            <h3>
-                        Region: 
-            </h3>
             <button
+                        className="fave-button"
                         onClick={[Function]}
             >
                         favorite
             </button>
             <Link
+                        className="details-link"
                         onClick={[Function]}
                         replace={false}
                         to="/undefined"
@@ -227,18 +183,14 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <h2 />,
-              <h3>
-                Milk-Type: 
-</h3>,
-              <h3>
-                Region: 
-</h3>,
               <button
+                className="fave-button"
                 onClick={[Function]}
 >
                 favorite
 </button>,
               <Link
+                className="details-link"
                 onClick={[Function]}
                 replace={false}
                 to="/undefined"
@@ -266,41 +218,8 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": Array [
-                  "Milk-Type: ",
-                  undefined,
-                ],
-              },
-              "ref": null,
-              "rendered": Array [
-                "Milk-Type: ",
-                undefined,
-              ],
-              "type": "h3",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  "Region: ",
-                  undefined,
-                ],
-              },
-              "ref": null,
-              "rendered": Array [
-                "Region: ",
-                undefined,
-              ],
-              "type": "h3",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
                 "children": "favorite",
+                "className": "fave-button",
                 "onClick": [Function],
               },
               "ref": null,
@@ -313,6 +232,7 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "children": "See more info",
+                "className": "details-link",
                 "onClick": [Function],
                 "replace": false,
                 "to": "/undefined",

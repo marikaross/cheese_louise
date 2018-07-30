@@ -2,6 +2,9 @@ import {App, mapStateToProps, mapDispatchToProps} from './App';
 import React from 'react';
 import { shallow } from 'enzyme';
 import * as action from '../../actions';
+import { fetchCheese } from '../../thunks/fetchCheese';
+
+jest.mock('../../thunks/fetchCheese')
 
 describe('App', () => {
   let wrapper
@@ -62,6 +65,14 @@ describe('App', () => {
       const actionToDispatch = action.addCheese({name: 'american'})
       mappedProps.addCheese({name: 'american'})
       expect(mockDispatch).toBeCalledWith(actionToDispatch)
+  })
+
+  it('should call dispatch with fetchCheese', () => {
+      const mockDispatch = jest.fn()
+      const mappedProps = mapDispatchToProps(mockDispatch)
+      const actionToDispatch = fetchCheese('www.someUrl')
+      mappedProps.fetchCheese('www.someUrl')
+      expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
   })
 
 })
