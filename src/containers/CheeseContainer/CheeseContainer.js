@@ -5,6 +5,7 @@ import { addFaveCheese, deleteCheese } from '../../actions';
 import { Link } from 'react-router-dom';
 import './CheeseContainer.css';
 import { fetchSummary } from '../../thunks/fetchSummary';
+import PropTypes from 'prop-types'
 
 export const CheeseContainer = (props) => {
   const toggleFave = (id) => {
@@ -20,7 +21,6 @@ export const CheeseContainer = (props) => {
   }
 
   const handleFetch = async (id, urlSnippet) => {
-    console.log(urlSnippet)
     const url = `https://fr.wikipedia.org/w/api.php?action=opensearch&search=${urlSnippet}&limit=1&format=json`
     await props.fetchSummary(url, id)
   }
@@ -60,5 +60,13 @@ export const mapDispatchToProps = (dispatch) => ({
   addFaveCheese: (id) => dispatch(addFaveCheese(id)),
   fetchSummary: (summary, id) => dispatch(fetchSummary(summary, id))
 })
+
+CheeseContainer.propTypes = {
+  deleteCheese: PropTypes.func,
+  addFaveCheese: PropTypes.func,
+  fetchSummary: PropTypes.func,
+  cheeses: PropTypes.array,
+  favorites: PropTypes.array
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(CheeseContainer);

@@ -2,7 +2,6 @@ import {isLoading, hasErrored, summaryFetchDataSuccess } from '../actions';
 import { summaryCleaner } from '../helper/cheese-cleaner';
 
 export const fetchSummary = (url, id) => {
-  console.log(url)
 return async (dispatch) => { 
   try {
     dispatch(isLoading(true))

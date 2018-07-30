@@ -8,19 +8,19 @@ describe('favesReducer', () => {
     expect(result).toEqual(expected)
   })
 
-  it('should add a cheeseId to the store when selected as a favorite', () => {
-    const favorites = [{cheeseId: 1}, {cheeseId: 7}]
-    const newCheese = [{cheeseId: 5}]
-    const result = action.addFaveCheese(5)
-    const expected = [{cheeseId: 1}, {cheeseId: 7}, {cheeseId: 5}]
+  it('should add an id object to the store when selected as a favorite', () => {
+    const initialState = [{id: 1}, {id: 7}]
+    const newCheese = {id: 5}
+    const result = favesReducer(initialState, action.addFaveCheese(newCheese))
+    const expected = [{id: 1}, {id: 7}, {id: 5}]
     expect(result).toEqual(expected)
   })
 
-  it('should remove a cheeseId from the store when a user rejcts a cheese as a favorites', () => {
-    const favorites = [{cheeseId: 1}, {cheeseId: 7}]
-    const rejectedCheese = [{cheeseId: 7}]
-    const result = action.deleteCheese(7)
-    const expected = [{cheeseId: 1}]
+  it('should remove an id object from the store when a user rejcts a cheese as a favorites', () => {
+    const initialState = [{id: 1}, {id: 7}]
+    const rejectedCheese = {id: 7}
+    const result = favesReducer(initialState, action.deleteCheese(rejectedCheese))
+    const expected = [{id: 1}]
     expect(result).toEqual(expected)
   }) 
   

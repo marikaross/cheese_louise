@@ -25,7 +25,6 @@ export const cheeseReducer = (state = [], action) => {
     case 'SUMMARY_FETCH_DATA_SUCCESS':
       const addSummary = state.map(cheese => {
        if (cheese.cheeseId === action.id) {
-      console.log(action)
         return {...cheese, summary: action.summary}
        }
        else {

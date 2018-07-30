@@ -1,11 +1,11 @@
-import { Header } from './Header';
+import { CheeseDetails } from './CheeseDetails';
 import React from 'react';
 import { shallow } from 'enzyme';
 
-describe('Header', () => {
+describe('CheeseDetails', () => {
 
   it('should match the snapShot', () => {
-    let wrapper = shallow(<Header />)
+    let wrapper = shallow(<CheeseDetails />)
     expect(wrapper).toMatchSnapshot()
   })
-})
+}) 

@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 import { addCheese } from '../../actions';
 import { fetchCheese } from '../../thunks/fetchCheese';
 import { Route, withRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import './App.css';
 
 
@@ -52,5 +53,15 @@ export const mapDispatchToProps = (dispatch) => ({
   addCheese: (cheeses) => dispatch(addCheese(cheeses)), 
   fetchCheese: (url) => dispatch(fetchCheese(url))
 })
+
+
+App.propTypes = {
+  cheeses: PropTypes.array,
+  favorites: PropTypes.array,
+  isLoading: PropTypes.bool,
+  hasErrored: PropTypes.bool,
+  addCheese: PropTypes.func,
+  fetchCheese: PropTypes.func
+}
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App))

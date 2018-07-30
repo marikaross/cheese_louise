@@ -1,32 +1,44 @@
 .CheeseCard {
-  width: 40%;
-  height: 20%;
-  background: #9f8a72;
-  opacity: .7;
-  margin: 3px;
+  width: 45%;
+  height: 30%;
+  background: #364a75;
+  color: #fefaea;
+  margin: 5px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 20px;
+  justify-content: space-around;
 }
 
 .cheese-image {
-  width: 150px;
-  height: 150px;
+  width: 215px;
+  height: 215px;
+  -webkit-filter: grayscale(.4);
+  filter: grayscale(.4);
 }
 
 .cheese-info {
   flex-direction: column;
   padding-left: 20px;
   padding-right: 20px;
-
 }
 
 h2 {
-  font-size: 1.1em;
+  font-size: 1.4em;
 }
 
 h3 {
   font-size: 1em;
+}
+
+.CheeseCard:hover {
+  transform: scale(1.01);
+}
+
+.details-link {
+  text-decoration: none;
+  color: #e9eae4;
+  display: block;
 }
