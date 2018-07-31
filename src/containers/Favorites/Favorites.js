@@ -38,6 +38,7 @@ export class Favorites extends Component{
         id={cheese.cheeseId}
         toggleFave={this.toggleFave}
         picture={cheese.picture}
+        favorites={this.props.favorites}
         />
       )
   })

@@ -22,11 +22,11 @@ export class CheeseContainer extends Component{
   }
 
   handleFetch = async (id, urlSnippet) => {
-    const url = `https://fr.wikipedia.org/w/api.php?action=opensearch&search=${urlSnippet}&limit=1&format=json`
+    const url = `https://fr.wikipedia.org/w/api.php?action=opensearch&search=${urlSnippet}&limit=2&format=json`
     await this.props.fetchSummary(url, id)
   }
 
-  
+
 
   cheeseCards = () => {return this.props.cheeses.map(cheese => {
     return (
@@ -41,6 +41,7 @@ export class CheeseContainer extends Component{
           frenchWiki={cheese.frenchWiki}
           button={cheese.cheeseId}
           handleFetch={this.handleFetch}
+          favorites={this.props.favorites}
         />
       ); 
   })

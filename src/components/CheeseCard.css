@@ -13,7 +13,7 @@
 }
 
 .cheese-image {
-  width: 215px;
+  width: 95%;
   height: 215px;
   -webkit-filter: grayscale(.4);
   filter: grayscale(.4);
@@ -44,9 +44,19 @@ h3 {
 }
 
 button {
-  background-color: #364a75;
+  background-color: #e38e34;
   border: none;
-  color: #e9eae4;
+  color: #811b13;
   font-size: 1.1em;
   margin: 5px;
+  border-radius: 7%;
+}
+
+button:hover {
+  cursor: pointer;
+  /*color*/
+}
+
+.cheese-icon {
+  width: 125%;
 }

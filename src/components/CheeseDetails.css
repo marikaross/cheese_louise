@@ -1,0 +1,32 @@
+.cheese-details {
+  background: #364a75;
+  color: #fefaea;
+  display: flex;
+  flex-direction: row;
+  /*justify-content: center;*/
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px;
+  justify-content: space-around;
+  width: 75%;
+  /*height: 400px;*/
+}
+
+.cheese-detail-image {
+  width: 215px;
+  height: 215px;
+  -webkit-filter: grayscale(.4);
+  filter: grayscale(.4);
+  margin: 5px;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1em;
+}
+
+.cheese-deets {
+}
