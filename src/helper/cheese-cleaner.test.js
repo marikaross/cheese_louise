@@ -10,7 +10,7 @@ describe('cheeseCleaner', () => {
       name: "Goat Milkton",
       milk: "Goat Milk",
       region: "Ardèche",
-      picture: "../images/sad-cheese.jpg"
+      picture: ""
     },
     {
     frenchWiki: "/Gruy%C3%A8re_fran%C3%A7ais",
@@ -27,8 +27,9 @@ describe('cheeseCleaner', () => {
 
 describe('summaryCleaner', () => {
   it('should return a string from an array of arrays', () => {
-    const mockSummaryData = "Bees are flying insects closely related to wasps and ants, known for their role in pollination and, in the case of the best-known bee species, the European honey bee, for producing honey and beeswax."
-    const summary = summaryCleaner(mockSummaryResults)
-    expect(summary).toEqual(mockSummaryData)
+    const mockSummaryResults = "Bees are flying insects closely related to wasps and ants, known for their role in pollination and, in the case of the best-known bee species, the European honey bee, for producing honey and beeswax."
+    const summary = summaryCleaner(mockSummaryData)
+
+    expect(summary).toEqual(mockSummaryResults)
   })
 })

@@ -2,7 +2,7 @@ import { Favorites, mapDispatchToProps, mapStateToProps } from './Favorites';
 import React from 'react';
 import { shallow } from 'enzyme';
 import * as action from '../../actions';
-import CheeseCard from '../../components/CheeseCard';
+import { CheeseCard } from '../../components/CheeseCard';
 
 describe('Favorites', () => {
   let wrapper
@@ -28,6 +28,26 @@ describe('Favorites', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
+  it('toggleFave should call isDuplicate', () => {
+    let mockToggleFave = jest.fn()
+    let isDuplicate = jest.fn()
+
+    wrapper = shallow (
+      <CheeseCard 
+        cheeses={mockCheeses}
+        favorites={mockFavorites}
+        addFaveCheese={mockAddFaveCheese}
+        deleteCheese={mockDeleteCheese}
+        toggleFave={mockToggleFave}
+        history={[]}
+        picture={'pic'}
+      />)
+ 
+
+    wrapper.find('button').simulate('click');
+    expect(isDuplicate).toBeCalled()
+  })
+
   it('should call toggleFave when the button is clicked', () => {
     let mockToggleFave = jest.fn()
     wrapper = shallow (
@@ -38,6 +58,7 @@ describe('Favorites', () => {
         deleteCheese={mockDeleteCheese}
         toggleFave={mockToggleFave}
         history={[]}
+        picture={'pic'}
       />)
  
 

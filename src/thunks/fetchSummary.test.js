@@ -32,13 +32,27 @@ describe('fetchSummary' ,() => {
   })
 
   it('should dispatch summaryFetchDataSuccess if all is well', async () => {
-   const mockSummary = [{id: 4, summary: 'Here is some stuff about cheese'}]
+    const mockresult = [
+  "bee",
+  [
+    "Bee"
+  ],
+  [
+    "Bees are flying insects closely related to wasps and ants, known for their role in pollination and, in the case of the best-known bee species, the European honey bee, for producing honey and beeswax."
+  ],
+  [
+    "https://en.wikipedia.org/wiki/Bee"
+  ]
+]
+
+    const id = 4
+
    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({ok: true, 
-      json: () => Promise.resolve({cheeses: mockSummary})
+      json: () => Promise.resolve(mockresult)
     }))
-   const thunk = fetchSummary(mockUrl)
+   const thunk = fetchSummary(mockUrl, id)
    await thunk(mockDispatch)
-   expect(mockDispatch).toHaveBeenCalledWith(summaryFetchDataSuccess())
+   expect(mockDispatch).toHaveBeenCalledWith(summaryFetchDataSuccess("Bees are flying insects closely related to wasps and ants, known for their role in pollination and, in the case of the best-known bee species, the European honey bee, for producing honey and beeswax.", 4))
 
    })
 })

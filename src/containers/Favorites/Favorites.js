@@ -68,6 +68,7 @@ Favorites.propTypes = {
   name: PropTypes.string,
   milk: PropTypes.string,
   region: PropTypes.string,
+  favorites: PropTypes.array
 
 }
 

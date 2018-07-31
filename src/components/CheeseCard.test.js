@@ -5,9 +5,10 @@ import { shallow, mount } from 'enzyme';
 describe('CheeseCard', () => {
 
   it('should match the snapShot', () => {
-    let wrapper = shallow(<CheeseCard />)
+    let wrapper = shallow(<CheeseCard favorites={[{}, {}]} picture={'photo of cheese'}/>)
     expect(wrapper).toMatchSnapshot()
   })
+
 
   it('should call makeUrl when the link is clicked', () => {
     let mockMakeUrl = jest.fn()
@@ -30,6 +31,7 @@ describe('CheeseCard', () => {
         history={[]}
         makeUrl={mockMakeUrl}
         handleFetch={mockHandleFetch}
+        picture={'picture'}
       />)
     wrapper.find('.details-link').simulate('click')
     expect(makeUrl).toBeCalled()

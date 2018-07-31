@@ -20,8 +20,8 @@ describe('CheeseContainer', () => {
 
   beforeEach(() => {
 
-    mockCheeses = [{name: 'nacho', id: 6}, {name: 'swiss', id: 5}]
-    mockFavorites = [{name: 'nacho', id: 6}]
+    mockCheeses = [{name: 'nacho', id: 6, picture: "none"}, {name: 'swiss', id: 5, picture: "none"}]
+    mockFavorites = [{name: 'nacho', id: 6, picture: 'none'}]
     mockAddFaveCheese = jest.fn()
     mockDeleteCheese = jest.fn()
     mockFetchSummary = jest.fn()
@@ -53,6 +53,8 @@ describe('CheeseContainer', () => {
         deleteCheese={mockDeleteCheese}
         toggleFave={mockToggleFave}
         history={[]}
+        picture={'hi'}
+        
       />)
  
 
@@ -69,6 +71,8 @@ describe('CheeseContainer', () => {
         addFaveCheese={mockAddFaveCheese}
         deleteCheese={mockDeleteCheese}
         toggleFave={mockToggleFave}
+        picture={'hi'}
+
       />)
 
     cardWrapper.find('button').simulate('click');
@@ -86,6 +90,7 @@ describe('CheeseContainer', () => {
         addFaveCheese={mockAddFaveCheese}
         deleteCheese={mockDeleteCheese}
         toggleFave={mockToggleFave}
+        picture={'hi'}
       />)
 
     cardWrapper.find('button').simulate('click');
@@ -103,6 +108,7 @@ describe('CheeseContainer', () => {
         addFaveCheese={mockAddFaveCheese}
         deleteCheese={mockDeleteCheese}
         toggleFave={mockToggleFave}
+        picture={'hi'}
       />)
       cardWrapper.find('button').simulate('click');
       const expected = undefined

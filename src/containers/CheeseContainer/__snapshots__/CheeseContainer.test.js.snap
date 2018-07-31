@@ -11,10 +11,12 @@ ShallowWrapper {
             Object {
               "id": 6,
               "name": "nacho",
+              "picture": "none",
             },
             Object {
               "id": 5,
               "name": "swiss",
+              "picture": "none",
             },
           ]
     }
@@ -24,6 +26,7 @@ ShallowWrapper {
             Object {
               "id": 6,
               "name": "nacho",
+              "picture": "none",
             },
           ]
     }
@@ -44,23 +47,41 @@ ShallowWrapper {
       "children": Array [
         <Unknown
           button={undefined}
+          favorites={
+                    Array [
+                              Object {
+                                "id": 6,
+                                "name": "nacho",
+                                "picture": "none",
+                              },
+                            ]
+          }
           frenchWiki={undefined}
           handleFetch={[Function]}
           id={undefined}
           milk={undefined}
           name="nacho"
-          picture={undefined}
+          picture="none"
           region={undefined}
           toggleFave={[Function]}
 />,
         <Unknown
           button={undefined}
+          favorites={
+                    Array [
+                              Object {
+                                "id": 6,
+                                "name": "nacho",
+                                "picture": "none",
+                              },
+                            ]
+          }
           frenchWiki={undefined}
           handleFetch={[Function]}
           id={undefined}
           milk={undefined}
           name="swiss"
-          picture={undefined}
+          picture="none"
           region={undefined}
           toggleFave={[Function]}
 />,
@@ -75,12 +96,19 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "button": undefined,
+          "favorites": Array [
+            Object {
+              "id": 6,
+              "name": "nacho",
+              "picture": "none",
+            },
+          ],
           "frenchWiki": undefined,
           "handleFetch": [Function],
           "id": undefined,
           "milk": undefined,
           "name": "nacho",
-          "picture": undefined,
+          "picture": "none",
           "region": undefined,
           "toggleFave": [Function],
         },
@@ -94,12 +122,19 @@ ShallowWrapper {
         "nodeType": "function",
         "props": Object {
           "button": undefined,
+          "favorites": Array [
+            Object {
+              "id": 6,
+              "name": "nacho",
+              "picture": "none",
+            },
+          ],
           "frenchWiki": undefined,
           "handleFetch": [Function],
           "id": undefined,
           "milk": undefined,
           "name": "swiss",
-          "picture": undefined,
+          "picture": "none",
           "region": undefined,
           "toggleFave": [Function],
         },
@@ -119,23 +154,41 @@ ShallowWrapper {
         "children": Array [
           <Unknown
             button={undefined}
+            favorites={
+                        Array [
+                                    Object {
+                                      "id": 6,
+                                      "name": "nacho",
+                                      "picture": "none",
+                                    },
+                                  ]
+            }
             frenchWiki={undefined}
             handleFetch={[Function]}
             id={undefined}
             milk={undefined}
             name="nacho"
-            picture={undefined}
+            picture="none"
             region={undefined}
             toggleFave={[Function]}
 />,
           <Unknown
             button={undefined}
+            favorites={
+                        Array [
+                                    Object {
+                                      "id": 6,
+                                      "name": "nacho",
+                                      "picture": "none",
+                                    },
+                                  ]
+            }
             frenchWiki={undefined}
             handleFetch={[Function]}
             id={undefined}
             milk={undefined}
             name="swiss"
-            picture={undefined}
+            picture="none"
             region={undefined}
             toggleFave={[Function]}
 />,
@@ -150,12 +203,19 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "button": undefined,
+            "favorites": Array [
+              Object {
+                "id": 6,
+                "name": "nacho",
+                "picture": "none",
+              },
+            ],
             "frenchWiki": undefined,
             "handleFetch": [Function],
             "id": undefined,
             "milk": undefined,
             "name": "nacho",
-            "picture": undefined,
+            "picture": "none",
             "region": undefined,
             "toggleFave": [Function],
           },
@@ -169,12 +229,19 @@ ShallowWrapper {
           "nodeType": "function",
           "props": Object {
             "button": undefined,
+            "favorites": Array [
+              Object {
+                "id": 6,
+                "name": "nacho",
+                "picture": "none",
+              },
+            ],
             "frenchWiki": undefined,
             "handleFetch": [Function],
             "id": undefined,
             "milk": undefined,
             "name": "swiss",
-            "picture": undefined,
+            "picture": "none",
             "region": undefined,
             "toggleFave": [Function],
           },

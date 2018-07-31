@@ -29,7 +29,7 @@ ShallowWrapper {
         <NavLink
           activeClassName="active"
           aria-current="page"
-          className="header-link"
+          className="favorites-link"
           to="/favorites"
 >
           Favorites
@@ -62,7 +62,7 @@ ShallowWrapper {
           "activeClassName": "active",
           "aria-current": "page",
           "children": "Favorites",
-          "className": "header-link",
+          "className": "favorites-link",
           "to": "/favorites",
         },
         "ref": null,
@@ -90,7 +90,7 @@ ShallowWrapper {
           <NavLink
             activeClassName="active"
             aria-current="page"
-            className="header-link"
+            className="favorites-link"
             to="/favorites"
 >
             Favorites
@@ -123,7 +123,7 @@ ShallowWrapper {
             "activeClassName": "active",
             "aria-current": "page",
             "children": "Favorites",
-            "className": "header-link",
+            "className": "favorites-link",
             "to": "/favorites",
           },
           "ref": null,

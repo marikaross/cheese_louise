@@ -17,7 +17,7 @@ export const CheeseCard = (props) => {
     <article className='CheeseCard' key={props.id}>
       <Link className='details-link'to={`/${props.id}`} onClick={() => makeUrl()}>   
       {props.picture.length ? 
-        <img src={`https://public.opendatasoft.com/explore/dataset/frenchcheese/files/${props.picture}/300/`}/> : 
+        <img className='cheese-image' src={`https://public.opendatasoft.com/explore/dataset/frenchcheese/files/${props.picture}/300/`}/> : 
         <img className='cheese-icon' src={cheeseIcon} />
       }</Link>
       <section className='cheese-info'>
@@ -38,5 +38,5 @@ CheeseCard.propTypes = {
   name: PropTypes.string,
   milk: PropTypes.string,
   region: PropTypes.string,
-  favorites: PropTypes
+  favorites: PropTypes.obj
 }
