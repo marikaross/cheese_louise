@@ -26,6 +26,7 @@ export class CheeseContainer extends Component{
     await this.props.fetchSummary(url, id)
   }
 
+  
 
   cheeseCards = () => {return this.props.cheeses.map(cheese => {
     return (
