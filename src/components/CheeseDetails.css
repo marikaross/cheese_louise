@@ -6,7 +6,6 @@
   margin: 5px;
   box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.6);
   margin: 0 auto;
-  justify-content: space-around;
   width: 75%;
   margin-top: 20px;
 }
@@ -14,7 +13,8 @@
 .overlay-cheese {
   background-color: rgba(54, 74, 117, .9);
   width: 100%;
-  height: 100%;display: flex;
+  height: 100%;
+  display: flex;
   padding-bottom: 20px;
 }
 
@@ -47,5 +47,30 @@
 
 .cheese-deets {
   width: 60%;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.cheese-pic-div {
+  margin: 20px;
+}
+
+@media screen and (max-width: 650px) {
+
+  .overlay-cheese {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cheese-deets {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .cheese-details {
+    width: 90%;
+  }
 
 }

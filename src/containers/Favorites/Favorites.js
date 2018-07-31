@@ -45,7 +45,9 @@ export class Favorites extends Component{
 
   render() {
     return (
-      (this.cheeseCards())
+      <div className="cheeseContainer">
+        {this.cheeseCards()}
+      </div>
       ) 
   }
 

@@ -10,10 +10,12 @@ export const CheeseDetails = ({cheeseId, name, milk, region, summary, picture}) 
   return (
       <section className='cheese-details'>
         <div className='overlay-cheese'>
-          {picture.length ? 
-            <img className='cheese-image' src={`https://public.opendatasoft.com/explore/dataset/frenchcheese/files/${picture}/300/`}/> : 
-            <img className='cheese-icon' src={cheeseIcon} />
-          }
+          <div className='cheese-pic-div'>
+            {picture.length ? 
+              <img className='cheese-detail-image' src={`https://public.opendatasoft.com/explore/dataset/frenchcheese/files/${picture}/300/`}/> : 
+              <img className='cheese-icon' src={cheeseIcon} />
+            }
+            </div>
             <div className='cheese-deets'>
               <h2 className="detail-name">{name}</h2>
               <h4 className='details'>{milk}</h4>
