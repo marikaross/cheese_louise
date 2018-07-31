@@ -6,7 +6,7 @@ import { Header } from '../Header/Header';
 import { connect } from 'react-redux';
 import { addCheese } from '../../actions';
 import { fetchCheese } from '../../thunks/fetchCheese';
-import { Route, withRouter } from 'react-router-dom';
+import { Route, withRouter, Switch } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './App.css';
 
@@ -24,19 +24,21 @@ export class App extends Component{
     return (
       <div className="App">
         <Route path='/' component={Header} />
-        <Route exact path='/' component={CheeseContainer} />
-        <Route exact path='/favorites' component={Favorites} />
-        <Route exact path='/:cheeseId' render={({ match }) => {
-          const oneCheese = this.props.cheeses.find(cheese => {
-            return cheese.cheeseId === match.params.cheeseId
-          })
-          return (
-            <div>
-              <CheeseDetails {...oneCheese} />
-            </div>
-            )
-        }
-      } />
+        <Switch>
+          <Route exact path='/' component={CheeseContainer} />
+          <Route exact path='/favorites' component={Favorites} />
+          <Route exact path='/:cheeseId' render={({ match }) => {
+            const oneCheese = this.props.cheeses.find(cheese => {
+              return cheese.cheeseId === match.params.cheeseId
+            })
+            return (
+              <div>
+                <CheeseDetails {...oneCheese} />
+              </div>
+              )
+          }
+        } />
+        </Switch>
       </div>
     );
   }

@@ -8,19 +8,21 @@ import cheeseIcon from '../images/milk.svg'
 
 export const CheeseDetails = ({cheeseId, name, milk, region, summary, picture}) => {
   return (
-      <div className='cheese-details'>
-      {picture.length ? 
-        <img className='cheese-image' src={`https://public.opendatasoft.com/explore/dataset/frenchcheese/files/${picture}/300/`}/> : 
-        <img className='cheese-icon' src={cheeseIcon} />
-      }
-        <div className='cheese-deets'>
-          <h2>{name}</h2>
-          <h4>{milk}</h4>
-          <h4>{region}</h4>
-          <h4>{summary}</h4>
-          <Link to='/'>back</Link>
-        </div>
-      </div>
+      <section className='cheese-details'>
+        <div className='overlay-cheese'>
+          {picture.length ? 
+            <img className='cheese-image' src={`https://public.opendatasoft.com/explore/dataset/frenchcheese/files/${picture}/300/`}/> : 
+            <img className='cheese-icon' src={cheeseIcon} />
+          }
+            <div className='cheese-deets'>
+              <h2 className="detail-name">{name}</h2>
+              <h4 className='details'>{milk}</h4>
+              <h4 className="details">region {region}</h4>
+              <h4>{summary}</h4>
+              <Link className='back' to='/'>back</Link>
+            </div>
+          </div>
+      </section>
     )
 }
 

@@ -3,7 +3,6 @@ import { CheeseCard } from '../../components/CheeseCard';
 import { connect } from 'react-redux';
 import { addFaveCheese, deleteCheese } from '../../actions';
 import PropTypes from 'prop-types';
-import './Favorites.css'
 
 
 export class Favorites extends Component{
@@ -31,7 +30,7 @@ export class Favorites extends Component{
 
   cheeseCards = () => {return this.faveCheeses.map(cheese => {
     return (
-      <CheeseCard
+      <CheeseCard classname='CheeseCard'
         name={cheese.name}
         milk={cheese.milk}
         region={cheese.region}

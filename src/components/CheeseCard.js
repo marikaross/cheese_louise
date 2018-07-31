@@ -14,21 +14,23 @@ export const CheeseCard = (props) => {
   }
 
   return (
-    <article className='CheeseCard' key={props.id}>
-      <Link className='details-link'to={`/${props.id}`} onClick={() => makeUrl()}>   
-      {props.picture.length ? 
-        <img className='cheese-image' src={`https://public.opendatasoft.com/explore/dataset/frenchcheese/files/${props.picture}/300/`}/> : 
-        <img className='cheese-icon' src={cheeseIcon} />
-      }</Link>
-      <section className='cheese-info'>
-        <Link className='details-link'to={`/${props.id}`} onClick={() => makeUrl()}><h2>{props.name}</h2></Link>
-        <button 
-        className='fave-button' 
-        onClick={() => props.toggleFave(props.id)}>
-        {props.favorites.includes(props.id) ? 'Unfavorite' : 'Favorite'}
-        </button>
-      </section>
-    </article>
+      <article className='CheeseCard' key={props.id}>
+        <div className="overlay">
+        <Link className='details-link'to={`/${props.id}`} onClick={() => makeUrl()}>   
+        {props.picture.length ? 
+          <img className='cheese-image' src={`https://public.opendatasoft.com/explore/dataset/frenchcheese/files/${props.picture}/300/`}/> : 
+          <img className='cheese-icon' src={cheeseIcon} />
+        }</Link>
+        <section className='cheese-info'>
+          <Link className='details-link'to={`/${props.id}`} onClick={() => makeUrl()}><h2>{props.name}</h2></Link>
+          <button 
+          className='fave-button' 
+          onClick={() => props.toggleFave(props.id)}>
+          {props.favorites.includes(props.id) ? 'Unfavorite' : 'Favorite'}
+          </button>
+        </section>
+        </div>
+      </article>
     )
 }
 
