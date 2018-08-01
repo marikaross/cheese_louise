@@ -15,3 +15,13 @@ Cheese-Louise is the result of a personal project assignment.  It allows the use
 ## Authors
 
 * **Marika Ross** - *Initial work* - [GitHub](https://github.com/marikaross)
+
+## Views
+#### Home Page
+<img src="https://github.com/marikaross/cheese_louise/blob/master/src/images/home-page.png?raw=true" />
+
+#### Favorites Page
+<img src="https://github.com/marikaross/cheese_louise/blob/master/src/images/favorites.png?raw=true" />
+
+#### Details Page
+<img src="https://github.com/marikaross/cheese_louise/blob/master/src/images/details.png?raw=true" />
