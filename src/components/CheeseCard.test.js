@@ -1,6 +1,6 @@
 import { CheeseCard } from './CheeseCard';
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 
 describe('CheeseCard', () => {
 
@@ -33,7 +33,8 @@ describe('CheeseCard', () => {
         handleFetch={mockHandleFetch}
         picture={'picture'}
       />)
-    wrapper.find('.details-link').simulate('click')
-    expect(makeUrl).toBeCalled()
+    wrapper.find('.test').simulate('click')
+    expect(mockMakeUrl).toBeCalled()
   })
 })
+

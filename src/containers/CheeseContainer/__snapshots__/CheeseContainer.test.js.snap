@@ -30,6 +30,7 @@ ShallowWrapper {
             },
           ]
     }
+    handleFetch={[Function]}
     isDuplicate={[Function]}
 />,
   Symbol(enzyme.__renderer__): Object {

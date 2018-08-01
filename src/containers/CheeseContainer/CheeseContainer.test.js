@@ -1,7 +1,7 @@
 import { CheeseContainer, mapStateToProps, mapDispatchToProps } from './CheeseContainer';
 import { CheeseCard } from '../../components/CheeseCard'
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import * as action from '../../actions';
 import { fetchSummary } from '../../thunks/fetchSummary';
 
@@ -9,6 +9,7 @@ jest.mock('../../thunks/fetchSummary')
 
 describe('CheeseContainer', () => {
   let wrapper
+  let cardWrapper
   let mockCheeses
   let mockFavorites
   let mockAddFaveCheese
@@ -17,6 +18,8 @@ describe('CheeseContainer', () => {
   let mockToggleFave
   let mockHistory
   let mockIsDuplicate
+  let mockHandleFetch
+  let mockMakeUrl
 
   beforeEach(() => {
 
@@ -28,6 +31,8 @@ describe('CheeseContainer', () => {
     mockToggleFave = jest.fn()
     mockHistory = []
     mockIsDuplicate = jest.fn()
+    mockHandleFetch = jest.fn()
+    mockMakeUrl = jest.fn()
 
 
     wrapper = shallow (
@@ -37,6 +42,19 @@ describe('CheeseContainer', () => {
         addFaveCheese={mockAddFaveCheese}
         deleteCheese={mockDeleteCheese}
         isDuplicate={mockIsDuplicate}
+        handleFetch={mockHandleFetch}
+      />)
+
+    cardWrapper = shallow( <CheeseCard 
+        cheeses={mockCheeses}
+        favorites={mockFavorites}
+        addFaveCheese={mockAddFaveCheese}
+        deleteCheese={mockDeleteCheese}
+        toggleFave={mockToggleFave}
+        history={[]}
+        makeUrl={mockMakeUrl}
+        handleFetch={mockHandleFetch}
+        picture={'picture'}
       />)
   })
 
@@ -45,20 +63,8 @@ describe('CheeseContainer', () => {
   })
 
   it('should call toggleFave when the button is clicked', () => {
-    wrapper = shallow (
-      <CheeseCard 
-        cheeses={mockCheeses}
-        favorites={mockFavorites}
-        addFaveCheese={mockAddFaveCheese}
-        deleteCheese={mockDeleteCheese}
-        toggleFave={mockToggleFave}
-        history={[]}
-        picture={'hi'}
-        
-      />)
- 
 
-    wrapper.find('button').simulate('click');
+    cardWrapper.find('button').simulate('click');
     expect(mockToggleFave).toBeCalled();
   });
 
@@ -83,33 +89,26 @@ describe('CheeseContainer', () => {
 
   it('should add a cheese to favorites if the id is not in the store', () => {
     const mockCheese = {id: 8}
-    const cardWrapper = shallow (
-      <CheeseCard 
-        cheeses={mockCheeses}
-        favorites={mockFavorites}
-        addFaveCheese={mockAddFaveCheese}
-        deleteCheese={mockDeleteCheese}
-        toggleFave={mockToggleFave}
-        picture={'hi'}
-      />)
-
     cardWrapper.find('button').simulate('click');
     wrapper.instance().toggleFave(mockCheese)
     expect(mockAddFaveCheese).toBeCalled()
   })
 
+  it('should call handleFetch when the link is clicked', async () => {
+ 
+    cardWrapper.find('.test').simulate('click')
+    expect(mockHandleFetch).toBeCalled()
+  })
+
+  it('handleFetch should call fetchSummary', () => {
+    cardWrapper.find('.test').simulate('click')
+    expect(mockFetchSummary).toBeCalled()
+  })
+
+
   describe('isDuplicate', () => {
     it('should return a boolean', () => {
       const mockCheese = {id: 8}
-      const cardWrapper = shallow (
-      <CheeseCard 
-        cheeses={mockCheeses}
-        favorites={mockFavorites}
-        addFaveCheese={mockAddFaveCheese}
-        deleteCheese={mockDeleteCheese}
-        toggleFave={mockToggleFave}
-        picture={'hi'}
-      />)
       cardWrapper.find('button').simulate('click');
       const expected = undefined
       const result = wrapper.instance().isDuplicate(8)
@@ -168,7 +167,7 @@ describe('CheeseContainer', () => {
       expect(mockDispatch).toBeCalledWith(actionToDispatch)
     })
 
-    it('calls dispatch with addSummary', () => {
+    it('calls dispatch with fetchSummary', () => {
       const mockDispatch = jest.fn()
       const mappedProps = mapDispatchToProps(mockDispatch)
       const actionToDispatch = fetchSummary('cheese stuff', 8)

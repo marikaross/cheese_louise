@@ -29,12 +29,13 @@ ShallowWrapper {
         className="overlay"
 >
         <Link
-                className="details-link"
+                className="details-link test"
                 onClick={[Function]}
                 replace={false}
                 to="/undefined"
         >
                 <img
+                        alt="cheese"
                         className="cheese-image"
                         src="https://public.opendatasoft.com/explore/dataset/frenchcheese/files/photo of cheese/300/"
                 />
@@ -68,12 +69,13 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Link
-            className="details-link"
+            className="details-link test"
             onClick={[Function]}
             replace={false}
             to="/undefined"
 >
             <img
+                        alt="cheese"
                         className="cheese-image"
                         src="https://public.opendatasoft.com/explore/dataset/frenchcheese/files/photo of cheese/300/"
             />
@@ -107,10 +109,11 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "children": <img
+              alt="cheese"
               className="cheese-image"
               src="https://public.opendatasoft.com/explore/dataset/frenchcheese/files/photo of cheese/300/"
 />,
-            "className": "details-link",
+            "className": "details-link test",
             "onClick": [Function],
             "replace": false,
             "to": "/undefined",
@@ -121,6 +124,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
+              "alt": "cheese",
               "className": "cheese-image",
               "src": "https://public.opendatasoft.com/explore/dataset/frenchcheese/files/photo of cheese/300/",
             },
@@ -211,12 +215,13 @@ ShallowWrapper {
           className="overlay"
 >
           <Link
-                    className="details-link"
+                    className="details-link test"
                     onClick={[Function]}
                     replace={false}
                     to="/undefined"
           >
                     <img
+                              alt="cheese"
                               className="cheese-image"
                               src="https://public.opendatasoft.com/explore/dataset/frenchcheese/files/photo of cheese/300/"
                     />
@@ -250,12 +255,13 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <Link
-              className="details-link"
+              className="details-link test"
               onClick={[Function]}
               replace={false}
               to="/undefined"
 >
               <img
+                            alt="cheese"
                             className="cheese-image"
                             src="https://public.opendatasoft.com/explore/dataset/frenchcheese/files/photo of cheese/300/"
               />
@@ -289,10 +295,11 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "children": <img
+                alt="cheese"
                 className="cheese-image"
                 src="https://public.opendatasoft.com/explore/dataset/frenchcheese/files/photo of cheese/300/"
 />,
-              "className": "details-link",
+              "className": "details-link test",
               "onClick": [Function],
               "replace": false,
               "to": "/undefined",
@@ -303,6 +310,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
+                "alt": "cheese",
                 "className": "cheese-image",
                 "src": "https://public.opendatasoft.com/explore/dataset/frenchcheese/files/photo of cheese/300/",
               },

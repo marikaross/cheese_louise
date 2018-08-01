@@ -15,7 +15,7 @@ import './App.css';
 export class App extends Component{
 
   async componentDidMount() {
-    const url = 'https://data.opendatasoft.com/api/records/1.0/search/?dataset=frenchcheese%40public&facet=id&facet=cheese&facet=milk';
+    const url = 'https://public.opendatasoft.com/api/records/1.0/search/?dataset=frenchcheese&rows=18&facet=id&facet=cheese&facet=milk';
     await this.props.fetchCheese(url);
   }
   
