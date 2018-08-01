@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { addFaveCheese, deleteCheese } from '../../actions';
 import PropTypes from 'prop-types';
 import { fetchSummary } from '../../thunks/fetchSummary';
+import sadCheese from '../../images/sad-cheese.jpg'
 
 
 export class Favorites extends Component{
@@ -27,7 +28,7 @@ export class Favorites extends Component{
     return [...faveCheeses, ...allCheese];
   }, [])
 
-    handleFetch = async (id, urlSnippet) => {
+  handleFetch = async (id, urlSnippet) => {
     const url = `https://fr.wikipedia.org/w/api.php?action=opensearch&search=${urlSnippet}&limit=2&format=json`;
     await this.props.fetchSummary(url, id);
   }
@@ -52,6 +53,14 @@ export class Favorites extends Component{
   }
 
   render() {
+    if (!this.props.favorites.length) {
+      return (
+        <div> 
+          <img src={sadCheese} />
+          <h2>You have no favorites, click the logo to find some!</h2>
+        </div>
+        )
+    }
     return (
       <div className="cheeseContainer">
         {this.cheeseCards()}

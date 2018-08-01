@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import cheeseIcon from '../images/milk.svg';
 
 export const CheeseCard = (props) => {
+  
   const makeUrl = () => {
     const id = props.id
     const urlSnippet = props.frenchWiki
@@ -14,7 +15,7 @@ export const CheeseCard = (props) => {
   return (
       <article className='CheeseCard' key={props.id}>
         <div className="overlay">
-        <Link className='details-link'to={`/${props.id}`} onClick={() => makeUrl()}>   
+        <Link className='details-link test'to={`/${props.id}`} onClick={() => makeUrl()}>   
         {props.picture.length ? 
           <img className='cheese-image' alt='cheese' src={`https://public.opendatasoft.com/explore/dataset/frenchcheese/files/${props.picture}/300/`}/> : 
           <img className='cheese-icon' alt='cheese placeholder' src={cheeseIcon} />

@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">50% </span>
+        <span class="strong">90% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>5/10</span>
+        <span class='fraction'>9/10</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">50% </span>
@@ -30,21 +30,21 @@
         <span class='fraction'>2/4</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">40% </span>
+        <span class="strong">80% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>2/5</span>
+        <span class='fraction'>4/5</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">50% </span>
+        <span class="strong">90% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>5/10</span>
+        <span class='fraction'>9/10</span>
       </div>
     </div>
     <p class="quiet">
       Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
     </p>
   </div>
-  <div class='status-line medium'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -89,26 +89,24 @@
 <a name='L41'></a><a href='#L41'>41</a>
 <a name='L42'></a><a href='#L42'>42</a>
 <a name='L43'></a><a href='#L43'>43</a>
-<a name='L44'></a><a href='#L44'>44</a>
-<a name='L45'></a><a href='#L45'>45</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L44'></a><a href='#L44'>44</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">8x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">24x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -137,25 +135,24 @@
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
 import './CheeseCard.css';
 import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
-import { fetchSummary } from '../thunks/fetchSummary';
 import PropTypes from 'prop-types';
 import cheeseIcon from '../images/milk.svg';
 &nbsp;
 export const CheeseCard = (props) =&gt; {
-  const makeUrl = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
-    const id = <span class="cstat-no" title="statement not covered" >props.id</span>
-    const urlSnippet = <span class="cstat-no" title="statement not covered" >props.frenchWiki</span>
-<span class="cstat-no" title="statement not covered" >    props.handleFetch(id, urlSnippet)</span>
+  
+  const makeUrl = () =&gt; {
+    const id = props.id
+    const urlSnippet = props.frenchWiki
+    props.handleFetch(id, urlSnippet)
   }
 &nbsp;
   return (
       &lt;article className='CheeseCard' key={props.id}&gt;
         &lt;div className="overlay"&gt;
-        &lt;Link className='details-link'to={`/${props.id}`} onClick={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >makeUrl()}</span>&gt;   
+        &lt;Link className='details-link test'to={`/${props.id}`} onClick={() =&gt; makeUrl()}&gt;   
         {props.picture.length ? 
-          &lt;img className='cheese-image' src={`https://public.opendatasoft.com/explore/dataset/frenchcheese/files/${props.picture}/300/`}/&gt; : 
-<span class="branch-1 cbranch-no" title="branch not covered" >          &lt;img className='cheese-icon' src={cheeseIcon} /&gt;</span>
+          &lt;img className='cheese-image' alt='cheese' src={`https://public.opendatasoft.com/explore/dataset/frenchcheese/files/${props.picture}/300/`}/&gt; : 
+<span class="branch-1 cbranch-no" title="branch not covered" >          &lt;img className='cheese-icon' alt='cheese placeholder' src={cheeseIcon} /&gt;</span>
         }&lt;/Link&gt;
         &lt;section className='cheese-info'&gt;
           &lt;Link className='details-link'to={`/${props.id}`} onClick={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >makeUrl()}</span>&gt;&lt;h2&gt;{props.name}&lt;/h2&gt;&lt;/Link&gt;
@@ -184,7 +181,7 @@ CheeseCard.propTypes = {
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Jul 31 2018 17:25:40 GMT-0600 (MDT)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Aug 01 2018 09:29:35 GMT-0600 (MDT)
 </div>
 </div>
 <script src="../prettify.js"></script>

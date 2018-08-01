@@ -1,9 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Favorites should match the snapShot 1`] = `
-ShallowWrapper {
+ReactWrapper {
   "length": 1,
-  Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Favorites
     addFaveCheese={[Function]}
     cheeses={
@@ -11,10 +10,12 @@ ShallowWrapper {
             Object {
               "id": 6,
               "name": "nacho",
+              "picture": "none",
             },
             Object {
               "id": 5,
               "name": "swiss",
+              "picture": "none",
             },
           ]
     }
@@ -24,9 +25,12 @@ ShallowWrapper {
             Object {
               "id": 6,
               "name": "nacho",
+              "picture": "none",
             },
           ]
     }
+    handleFetch={[Function]}
+    isDuplicate={[Function]}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -35,21 +39,1092 @@ ShallowWrapper {
     "simulateEvent": [Function],
     "unmount": [Function],
   },
+  Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__node__): Object {
-    "instance": null,
+    "instance": Favorites {
+      "_reactInternalFiber": FiberNode {
+        "_debugID": 5,
+        "_debugIsCurrentlyTiming": false,
+        "_debugOwner": FiberNode {
+          "_debugID": 4,
+          "_debugIsCurrentlyTiming": false,
+          "_debugOwner": null,
+          "_debugSource": null,
+          "actualDuration": 0,
+          "actualStartTime": 0,
+          "alternate": null,
+          "child": [Circular],
+          "effectTag": 1,
+          "expirationTime": 0,
+          "firstEffect": null,
+          "index": 0,
+          "key": null,
+          "lastEffect": null,
+          "memoizedProps": Object {
+            "Component": [Function],
+            "context": null,
+            "props": Object {
+              "addFaveCheese": [Function],
+              "cheeses": Array [
+                Object {
+                  "id": 6,
+                  "name": "nacho",
+                  "picture": "none",
+                },
+                Object {
+                  "id": 5,
+                  "name": "swiss",
+                  "picture": "none",
+                },
+              ],
+              "deleteCheese": [Function],
+              "favorites": Array [
+                Object {
+                  "id": 6,
+                  "name": "nacho",
+                  "picture": "none",
+                },
+              ],
+              "handleFetch": [Function],
+              "isDuplicate": [Function],
+            },
+          },
+          "memoizedState": Object {
+            "context": null,
+            "mount": true,
+            "props": Object {
+              "addFaveCheese": [Function],
+              "cheeses": Array [
+                Object {
+                  "id": 6,
+                  "name": "nacho",
+                  "picture": "none",
+                },
+                Object {
+                  "id": 5,
+                  "name": "swiss",
+                  "picture": "none",
+                },
+              ],
+              "deleteCheese": [Function],
+              "favorites": Array [
+                Object {
+                  "id": 6,
+                  "name": "nacho",
+                  "picture": "none",
+                },
+              ],
+              "handleFetch": [Function],
+              "isDuplicate": [Function],
+            },
+          },
+          "mode": 0,
+          "nextEffect": null,
+          "pendingProps": Object {
+            "Component": [Function],
+            "context": null,
+            "props": Object {
+              "addFaveCheese": [Function],
+              "cheeses": Array [
+                Object {
+                  "id": 6,
+                  "name": "nacho",
+                  "picture": "none",
+                },
+                Object {
+                  "id": 5,
+                  "name": "swiss",
+                  "picture": "none",
+                },
+              ],
+              "deleteCheese": [Function],
+              "favorites": Array [
+                Object {
+                  "id": 6,
+                  "name": "nacho",
+                  "picture": "none",
+                },
+              ],
+              "handleFetch": [Function],
+              "isDuplicate": [Function],
+            },
+          },
+          "ref": null,
+          "return": FiberNode {
+            "_debugID": 1,
+            "_debugIsCurrentlyTiming": false,
+            "_debugOwner": null,
+            "_debugSource": null,
+            "actualDuration": 0,
+            "actualStartTime": 0,
+            "alternate": FiberNode {
+              "_debugID": 1,
+              "_debugIsCurrentlyTiming": false,
+              "_debugOwner": null,
+              "_debugSource": null,
+              "actualDuration": 0,
+              "actualStartTime": 0,
+              "alternate": [Circular],
+              "child": null,
+              "effectTag": 0,
+              "expirationTime": 1,
+              "firstEffect": null,
+              "index": 0,
+              "key": null,
+              "lastEffect": null,
+              "memoizedProps": null,
+              "memoizedState": null,
+              "mode": 0,
+              "nextEffect": null,
+              "pendingProps": null,
+              "ref": null,
+              "return": null,
+              "selfBaseTime": 0,
+              "sibling": null,
+              "stateNode": Object {
+                "containerInfo": <div>
+                  <div
+                                    class="cheeseContainer"
+                  />
+</div>,
+                "context": Object {},
+                "current": [Circular],
+                "earliestPendingTime": 0,
+                "earliestSuspendedTime": 0,
+                "finishedWork": null,
+                "firstBatch": null,
+                "hydrate": false,
+                "latestPendingTime": 0,
+                "latestPingedTime": 0,
+                "latestSuspendedTime": 0,
+                "nextScheduledRoot": null,
+                "pendingChildren": null,
+                "pendingCommitExpirationTime": 0,
+                "pendingContext": null,
+                "remainingExpirationTime": 0,
+              },
+              "tag": 3,
+              "treeBaseTime": 0,
+              "type": null,
+              "updateQueue": Object {
+                "baseState": null,
+                "expirationTime": 1,
+                "firstCapturedEffect": null,
+                "firstCapturedUpdate": null,
+                "firstEffect": null,
+                "firstUpdate": Object {
+                  "callback": null,
+                  "expirationTime": 1,
+                  "next": null,
+                  "nextEffect": null,
+                  "payload": Object {
+                    "element": <WrapperComponent
+                      Component={[Function]}
+                      context={null}
+                      props={
+                                            Object {
+                                                                  "addFaveCheese": [Function],
+                                                                  "cheeses": Array [
+                                                                    Object {
+                                                                      "id": 6,
+                                                                      "name": "nacho",
+                                                                      "picture": "none",
+                                                                    },
+                                                                    Object {
+                                                                      "id": 5,
+                                                                      "name": "swiss",
+                                                                      "picture": "none",
+                                                                    },
+                                                                  ],
+                                                                  "deleteCheese": [Function],
+                                                                  "favorites": Array [
+                                                                    Object {
+                                                                      "id": 6,
+                                                                      "name": "nacho",
+                                                                      "picture": "none",
+                                                                    },
+                                                                  ],
+                                                                  "handleFetch": [Function],
+                                                                  "isDuplicate": [Function],
+                                                                }
+                      }
+/>,
+                  },
+                  "tag": 0,
+                },
+                "lastCapturedEffect": null,
+                "lastCapturedUpdate": null,
+                "lastEffect": null,
+                "lastUpdate": Object {
+                  "callback": null,
+                  "expirationTime": 1,
+                  "next": null,
+                  "nextEffect": null,
+                  "payload": Object {
+                    "element": <WrapperComponent
+                      Component={[Function]}
+                      context={null}
+                      props={
+                                            Object {
+                                                                  "addFaveCheese": [Function],
+                                                                  "cheeses": Array [
+                                                                    Object {
+                                                                      "id": 6,
+                                                                      "name": "nacho",
+                                                                      "picture": "none",
+                                                                    },
+                                                                    Object {
+                                                                      "id": 5,
+                                                                      "name": "swiss",
+                                                                      "picture": "none",
+                                                                    },
+                                                                  ],
+                                                                  "deleteCheese": [Function],
+                                                                  "favorites": Array [
+                                                                    Object {
+                                                                      "id": 6,
+                                                                      "name": "nacho",
+                                                                      "picture": "none",
+                                                                    },
+                                                                  ],
+                                                                  "handleFetch": [Function],
+                                                                  "isDuplicate": [Function],
+                                                                }
+                      }
+/>,
+                  },
+                  "tag": 0,
+                },
+              },
+            },
+            "child": [Circular],
+            "effectTag": 32,
+            "expirationTime": 0,
+            "firstEffect": [Circular],
+            "index": 0,
+            "key": null,
+            "lastEffect": [Circular],
+            "memoizedProps": null,
+            "memoizedState": Object {
+              "element": <WrapperComponent
+                Component={[Function]}
+                context={null}
+                props={
+                                Object {
+                                                "addFaveCheese": [Function],
+                                                "cheeses": Array [
+                                                  Object {
+                                                    "id": 6,
+                                                    "name": "nacho",
+                                                    "picture": "none",
+                                                  },
+                                                  Object {
+                                                    "id": 5,
+                                                    "name": "swiss",
+                                                    "picture": "none",
+                                                  },
+                                                ],
+                                                "deleteCheese": [Function],
+                                                "favorites": Array [
+                                                  Object {
+                                                    "id": 6,
+                                                    "name": "nacho",
+                                                    "picture": "none",
+                                                  },
+                                                ],
+                                                "handleFetch": [Function],
+                                                "isDuplicate": [Function],
+                                              }
+                }
+/>,
+            },
+            "mode": 0,
+            "nextEffect": null,
+            "pendingProps": null,
+            "ref": null,
+            "return": null,
+            "selfBaseTime": 0,
+            "sibling": null,
+            "stateNode": Object {
+              "containerInfo": <div>
+                <div
+                                class="cheeseContainer"
+                />
+</div>,
+              "context": Object {},
+              "current": [Circular],
+              "earliestPendingTime": 0,
+              "earliestSuspendedTime": 0,
+              "finishedWork": null,
+              "firstBatch": null,
+              "hydrate": false,
+              "latestPendingTime": 0,
+              "latestPingedTime": 0,
+              "latestSuspendedTime": 0,
+              "nextScheduledRoot": null,
+              "pendingChildren": null,
+              "pendingCommitExpirationTime": 0,
+              "pendingContext": null,
+              "remainingExpirationTime": 0,
+            },
+            "tag": 3,
+            "treeBaseTime": 0,
+            "type": null,
+            "updateQueue": Object {
+              "baseState": Object {
+                "element": <WrapperComponent
+                  Component={[Function]}
+                  context={null}
+                  props={
+                                    Object {
+                                                      "addFaveCheese": [Function],
+                                                      "cheeses": Array [
+                                                        Object {
+                                                          "id": 6,
+                                                          "name": "nacho",
+                                                          "picture": "none",
+                                                        },
+                                                        Object {
+                                                          "id": 5,
+                                                          "name": "swiss",
+                                                          "picture": "none",
+                                                        },
+                                                      ],
+                                                      "deleteCheese": [Function],
+                                                      "favorites": Array [
+                                                        Object {
+                                                          "id": 6,
+                                                          "name": "nacho",
+                                                          "picture": "none",
+                                                        },
+                                                      ],
+                                                      "handleFetch": [Function],
+                                                      "isDuplicate": [Function],
+                                                    }
+                  }
+/>,
+              },
+              "expirationTime": 0,
+              "firstCapturedEffect": null,
+              "firstCapturedUpdate": null,
+              "firstEffect": null,
+              "firstUpdate": null,
+              "lastCapturedEffect": null,
+              "lastCapturedUpdate": null,
+              "lastEffect": null,
+              "lastUpdate": null,
+            },
+          },
+          "selfBaseTime": 0,
+          "sibling": null,
+          "stateNode": WrapperComponent {
+            "_reactInternalFiber": [Circular],
+            "_reactInternalInstance": Object {},
+            "context": Object {},
+            "props": Object {
+              "Component": [Function],
+              "context": null,
+              "props": Object {
+                "addFaveCheese": [Function],
+                "cheeses": Array [
+                  Object {
+                    "id": 6,
+                    "name": "nacho",
+                    "picture": "none",
+                  },
+                  Object {
+                    "id": 5,
+                    "name": "swiss",
+                    "picture": "none",
+                  },
+                ],
+                "deleteCheese": [Function],
+                "favorites": Array [
+                  Object {
+                    "id": 6,
+                    "name": "nacho",
+                    "picture": "none",
+                  },
+                ],
+                "handleFetch": [Function],
+                "isDuplicate": [Function],
+              },
+            },
+            "refs": Object {},
+            "state": Object {
+              "context": null,
+              "mount": true,
+              "props": Object {
+                "addFaveCheese": [Function],
+                "cheeses": Array [
+                  Object {
+                    "id": 6,
+                    "name": "nacho",
+                    "picture": "none",
+                  },
+                  Object {
+                    "id": 5,
+                    "name": "swiss",
+                    "picture": "none",
+                  },
+                ],
+                "deleteCheese": [Function],
+                "favorites": Array [
+                  Object {
+                    "id": 6,
+                    "name": "nacho",
+                    "picture": "none",
+                  },
+                ],
+                "handleFetch": [Function],
+                "isDuplicate": [Function],
+              },
+            },
+            "updater": Object {
+              "enqueueForceUpdate": [Function],
+              "enqueueReplaceState": [Function],
+              "enqueueSetState": [Function],
+              "isMounted": [Function],
+            },
+          },
+          "tag": 2,
+          "treeBaseTime": 0,
+          "type": [Function],
+          "updateQueue": null,
+        },
+        "_debugSource": null,
+        "actualDuration": 0,
+        "actualStartTime": 0,
+        "alternate": null,
+        "child": FiberNode {
+          "_debugID": 6,
+          "_debugIsCurrentlyTiming": false,
+          "_debugOwner": [Circular],
+          "_debugSource": Object {
+            "fileName": "/Users/marikaross/mod3/cheese-louise/cheese-louise/src/containers/Favorites/Favorites.js",
+            "lineNumber": 56,
+          },
+          "actualDuration": 0,
+          "actualStartTime": 0,
+          "alternate": null,
+          "child": null,
+          "effectTag": 0,
+          "expirationTime": 0,
+          "firstEffect": null,
+          "index": 0,
+          "key": null,
+          "lastEffect": null,
+          "memoizedProps": Object {
+            "children": Array [],
+            "className": "cheeseContainer",
+          },
+          "memoizedState": null,
+          "mode": 0,
+          "nextEffect": null,
+          "pendingProps": Object {
+            "children": Array [],
+            "className": "cheeseContainer",
+          },
+          "ref": null,
+          "return": [Circular],
+          "selfBaseTime": 0,
+          "sibling": null,
+          "stateNode": <div
+            class="cheeseContainer"
+/>,
+          "tag": 5,
+          "treeBaseTime": 0,
+          "type": "div",
+          "updateQueue": null,
+        },
+        "effectTag": 1,
+        "expirationTime": 0,
+        "firstEffect": null,
+        "index": 0,
+        "key": null,
+        "lastEffect": null,
+        "memoizedProps": Object {
+          "addFaveCheese": [Function],
+          "cheeses": Array [
+            Object {
+              "id": 6,
+              "name": "nacho",
+              "picture": "none",
+            },
+            Object {
+              "id": 5,
+              "name": "swiss",
+              "picture": "none",
+            },
+          ],
+          "deleteCheese": [Function],
+          "favorites": Array [
+            Object {
+              "id": 6,
+              "name": "nacho",
+              "picture": "none",
+            },
+          ],
+          "handleFetch": [Function],
+          "isDuplicate": [Function],
+        },
+        "memoizedState": null,
+        "mode": 0,
+        "nextEffect": null,
+        "pendingProps": Object {
+          "addFaveCheese": [Function],
+          "cheeses": Array [
+            Object {
+              "id": 6,
+              "name": "nacho",
+              "picture": "none",
+            },
+            Object {
+              "id": 5,
+              "name": "swiss",
+              "picture": "none",
+            },
+          ],
+          "deleteCheese": [Function],
+          "favorites": Array [
+            Object {
+              "id": 6,
+              "name": "nacho",
+              "picture": "none",
+            },
+          ],
+          "handleFetch": [Function],
+          "isDuplicate": [Function],
+        },
+        "ref": null,
+        "return": FiberNode {
+          "_debugID": 4,
+          "_debugIsCurrentlyTiming": false,
+          "_debugOwner": null,
+          "_debugSource": null,
+          "actualDuration": 0,
+          "actualStartTime": 0,
+          "alternate": null,
+          "child": [Circular],
+          "effectTag": 1,
+          "expirationTime": 0,
+          "firstEffect": null,
+          "index": 0,
+          "key": null,
+          "lastEffect": null,
+          "memoizedProps": Object {
+            "Component": [Function],
+            "context": null,
+            "props": Object {
+              "addFaveCheese": [Function],
+              "cheeses": Array [
+                Object {
+                  "id": 6,
+                  "name": "nacho",
+                  "picture": "none",
+                },
+                Object {
+                  "id": 5,
+                  "name": "swiss",
+                  "picture": "none",
+                },
+              ],
+              "deleteCheese": [Function],
+              "favorites": Array [
+                Object {
+                  "id": 6,
+                  "name": "nacho",
+                  "picture": "none",
+                },
+              ],
+              "handleFetch": [Function],
+              "isDuplicate": [Function],
+            },
+          },
+          "memoizedState": Object {
+            "context": null,
+            "mount": true,
+            "props": Object {
+              "addFaveCheese": [Function],
+              "cheeses": Array [
+                Object {
+                  "id": 6,
+                  "name": "nacho",
+                  "picture": "none",
+                },
+                Object {
+                  "id": 5,
+                  "name": "swiss",
+                  "picture": "none",
+                },
+              ],
+              "deleteCheese": [Function],
+              "favorites": Array [
+                Object {
+                  "id": 6,
+                  "name": "nacho",
+                  "picture": "none",
+                },
+              ],
+              "handleFetch": [Function],
+              "isDuplicate": [Function],
+            },
+          },
+          "mode": 0,
+          "nextEffect": null,
+          "pendingProps": Object {
+            "Component": [Function],
+            "context": null,
+            "props": Object {
+              "addFaveCheese": [Function],
+              "cheeses": Array [
+                Object {
+                  "id": 6,
+                  "name": "nacho",
+                  "picture": "none",
+                },
+                Object {
+                  "id": 5,
+                  "name": "swiss",
+                  "picture": "none",
+                },
+              ],
+              "deleteCheese": [Function],
+              "favorites": Array [
+                Object {
+                  "id": 6,
+                  "name": "nacho",
+                  "picture": "none",
+                },
+              ],
+              "handleFetch": [Function],
+              "isDuplicate": [Function],
+            },
+          },
+          "ref": null,
+          "return": FiberNode {
+            "_debugID": 1,
+            "_debugIsCurrentlyTiming": false,
+            "_debugOwner": null,
+            "_debugSource": null,
+            "actualDuration": 0,
+            "actualStartTime": 0,
+            "alternate": FiberNode {
+              "_debugID": 1,
+              "_debugIsCurrentlyTiming": false,
+              "_debugOwner": null,
+              "_debugSource": null,
+              "actualDuration": 0,
+              "actualStartTime": 0,
+              "alternate": [Circular],
+              "child": null,
+              "effectTag": 0,
+              "expirationTime": 1,
+              "firstEffect": null,
+              "index": 0,
+              "key": null,
+              "lastEffect": null,
+              "memoizedProps": null,
+              "memoizedState": null,
+              "mode": 0,
+              "nextEffect": null,
+              "pendingProps": null,
+              "ref": null,
+              "return": null,
+              "selfBaseTime": 0,
+              "sibling": null,
+              "stateNode": Object {
+                "containerInfo": <div>
+                  <div
+                                    class="cheeseContainer"
+                  />
+</div>,
+                "context": Object {},
+                "current": [Circular],
+                "earliestPendingTime": 0,
+                "earliestSuspendedTime": 0,
+                "finishedWork": null,
+                "firstBatch": null,
+                "hydrate": false,
+                "latestPendingTime": 0,
+                "latestPingedTime": 0,
+                "latestSuspendedTime": 0,
+                "nextScheduledRoot": null,
+                "pendingChildren": null,
+                "pendingCommitExpirationTime": 0,
+                "pendingContext": null,
+                "remainingExpirationTime": 0,
+              },
+              "tag": 3,
+              "treeBaseTime": 0,
+              "type": null,
+              "updateQueue": Object {
+                "baseState": null,
+                "expirationTime": 1,
+                "firstCapturedEffect": null,
+                "firstCapturedUpdate": null,
+                "firstEffect": null,
+                "firstUpdate": Object {
+                  "callback": null,
+                  "expirationTime": 1,
+                  "next": null,
+                  "nextEffect": null,
+                  "payload": Object {
+                    "element": <WrapperComponent
+                      Component={[Function]}
+                      context={null}
+                      props={
+                                            Object {
+                                                                  "addFaveCheese": [Function],
+                                                                  "cheeses": Array [
+                                                                    Object {
+                                                                      "id": 6,
+                                                                      "name": "nacho",
+                                                                      "picture": "none",
+                                                                    },
+                                                                    Object {
+                                                                      "id": 5,
+                                                                      "name": "swiss",
+                                                                      "picture": "none",
+                                                                    },
+                                                                  ],
+                                                                  "deleteCheese": [Function],
+                                                                  "favorites": Array [
+                                                                    Object {
+                                                                      "id": 6,
+                                                                      "name": "nacho",
+                                                                      "picture": "none",
+                                                                    },
+                                                                  ],
+                                                                  "handleFetch": [Function],
+                                                                  "isDuplicate": [Function],
+                                                                }
+                      }
+/>,
+                  },
+                  "tag": 0,
+                },
+                "lastCapturedEffect": null,
+                "lastCapturedUpdate": null,
+                "lastEffect": null,
+                "lastUpdate": Object {
+                  "callback": null,
+                  "expirationTime": 1,
+                  "next": null,
+                  "nextEffect": null,
+                  "payload": Object {
+                    "element": <WrapperComponent
+                      Component={[Function]}
+                      context={null}
+                      props={
+                                            Object {
+                                                                  "addFaveCheese": [Function],
+                                                                  "cheeses": Array [
+                                                                    Object {
+                                                                      "id": 6,
+                                                                      "name": "nacho",
+                                                                      "picture": "none",
+                                                                    },
+                                                                    Object {
+                                                                      "id": 5,
+                                                                      "name": "swiss",
+                                                                      "picture": "none",
+                                                                    },
+                                                                  ],
+                                                                  "deleteCheese": [Function],
+                                                                  "favorites": Array [
+                                                                    Object {
+                                                                      "id": 6,
+                                                                      "name": "nacho",
+                                                                      "picture": "none",
+                                                                    },
+                                                                  ],
+                                                                  "handleFetch": [Function],
+                                                                  "isDuplicate": [Function],
+                                                                }
+                      }
+/>,
+                  },
+                  "tag": 0,
+                },
+              },
+            },
+            "child": [Circular],
+            "effectTag": 32,
+            "expirationTime": 0,
+            "firstEffect": [Circular],
+            "index": 0,
+            "key": null,
+            "lastEffect": [Circular],
+            "memoizedProps": null,
+            "memoizedState": Object {
+              "element": <WrapperComponent
+                Component={[Function]}
+                context={null}
+                props={
+                                Object {
+                                                "addFaveCheese": [Function],
+                                                "cheeses": Array [
+                                                  Object {
+                                                    "id": 6,
+                                                    "name": "nacho",
+                                                    "picture": "none",
+                                                  },
+                                                  Object {
+                                                    "id": 5,
+                                                    "name": "swiss",
+                                                    "picture": "none",
+                                                  },
+                                                ],
+                                                "deleteCheese": [Function],
+                                                "favorites": Array [
+                                                  Object {
+                                                    "id": 6,
+                                                    "name": "nacho",
+                                                    "picture": "none",
+                                                  },
+                                                ],
+                                                "handleFetch": [Function],
+                                                "isDuplicate": [Function],
+                                              }
+                }
+/>,
+            },
+            "mode": 0,
+            "nextEffect": null,
+            "pendingProps": null,
+            "ref": null,
+            "return": null,
+            "selfBaseTime": 0,
+            "sibling": null,
+            "stateNode": Object {
+              "containerInfo": <div>
+                <div
+                                class="cheeseContainer"
+                />
+</div>,
+              "context": Object {},
+              "current": [Circular],
+              "earliestPendingTime": 0,
+              "earliestSuspendedTime": 0,
+              "finishedWork": null,
+              "firstBatch": null,
+              "hydrate": false,
+              "latestPendingTime": 0,
+              "latestPingedTime": 0,
+              "latestSuspendedTime": 0,
+              "nextScheduledRoot": null,
+              "pendingChildren": null,
+              "pendingCommitExpirationTime": 0,
+              "pendingContext": null,
+              "remainingExpirationTime": 0,
+            },
+            "tag": 3,
+            "treeBaseTime": 0,
+            "type": null,
+            "updateQueue": Object {
+              "baseState": Object {
+                "element": <WrapperComponent
+                  Component={[Function]}
+                  context={null}
+                  props={
+                                    Object {
+                                                      "addFaveCheese": [Function],
+                                                      "cheeses": Array [
+                                                        Object {
+                                                          "id": 6,
+                                                          "name": "nacho",
+                                                          "picture": "none",
+                                                        },
+                                                        Object {
+                                                          "id": 5,
+                                                          "name": "swiss",
+                                                          "picture": "none",
+                                                        },
+                                                      ],
+                                                      "deleteCheese": [Function],
+                                                      "favorites": Array [
+                                                        Object {
+                                                          "id": 6,
+                                                          "name": "nacho",
+                                                          "picture": "none",
+                                                        },
+                                                      ],
+                                                      "handleFetch": [Function],
+                                                      "isDuplicate": [Function],
+                                                    }
+                  }
+/>,
+              },
+              "expirationTime": 0,
+              "firstCapturedEffect": null,
+              "firstCapturedUpdate": null,
+              "firstEffect": null,
+              "firstUpdate": null,
+              "lastCapturedEffect": null,
+              "lastCapturedUpdate": null,
+              "lastEffect": null,
+              "lastUpdate": null,
+            },
+          },
+          "selfBaseTime": 0,
+          "sibling": null,
+          "stateNode": WrapperComponent {
+            "_reactInternalFiber": [Circular],
+            "_reactInternalInstance": Object {},
+            "context": Object {},
+            "props": Object {
+              "Component": [Function],
+              "context": null,
+              "props": Object {
+                "addFaveCheese": [Function],
+                "cheeses": Array [
+                  Object {
+                    "id": 6,
+                    "name": "nacho",
+                    "picture": "none",
+                  },
+                  Object {
+                    "id": 5,
+                    "name": "swiss",
+                    "picture": "none",
+                  },
+                ],
+                "deleteCheese": [Function],
+                "favorites": Array [
+                  Object {
+                    "id": 6,
+                    "name": "nacho",
+                    "picture": "none",
+                  },
+                ],
+                "handleFetch": [Function],
+                "isDuplicate": [Function],
+              },
+            },
+            "refs": Object {},
+            "state": Object {
+              "context": null,
+              "mount": true,
+              "props": Object {
+                "addFaveCheese": [Function],
+                "cheeses": Array [
+                  Object {
+                    "id": 6,
+                    "name": "nacho",
+                    "picture": "none",
+                  },
+                  Object {
+                    "id": 5,
+                    "name": "swiss",
+                    "picture": "none",
+                  },
+                ],
+                "deleteCheese": [Function],
+                "favorites": Array [
+                  Object {
+                    "id": 6,
+                    "name": "nacho",
+                    "picture": "none",
+                  },
+                ],
+                "handleFetch": [Function],
+                "isDuplicate": [Function],
+              },
+            },
+            "updater": Object {
+              "enqueueForceUpdate": [Function],
+              "enqueueReplaceState": [Function],
+              "enqueueSetState": [Function],
+              "isMounted": [Function],
+            },
+          },
+          "tag": 2,
+          "treeBaseTime": 0,
+          "type": [Function],
+          "updateQueue": null,
+        },
+        "selfBaseTime": 0,
+        "sibling": null,
+        "stateNode": [Circular],
+        "tag": 2,
+        "treeBaseTime": 0,
+        "type": [Function],
+        "updateQueue": null,
+      },
+      "_reactInternalInstance": Object {},
+      "cheeseCards": [Function],
+      "context": Object {},
+      "faveCheeses": Array [],
+      "handleFetch": [Function],
+      "isDuplicate": [Function],
+      "props": Object {
+        "addFaveCheese": [Function],
+        "cheeses": Array [
+          Object {
+            "id": 6,
+            "name": "nacho",
+            "picture": "none",
+          },
+          Object {
+            "id": 5,
+            "name": "swiss",
+            "picture": "none",
+          },
+        ],
+        "deleteCheese": [Function],
+        "favorites": Array [
+          Object {
+            "id": 6,
+            "name": "nacho",
+            "picture": "none",
+          },
+        ],
+        "handleFetch": [Function],
+        "isDuplicate": [Function],
+      },
+      "refs": Object {},
+      "state": null,
+      "toggleFave": [Function],
+      "updater": Object {
+        "enqueueForceUpdate": [Function],
+        "enqueueReplaceState": [Function],
+        "enqueueSetState": [Function],
+        "isMounted": [Function],
+      },
+    },
     "key": undefined,
-    "nodeType": "host",
+    "nodeType": "class",
     "props": Object {
-      "children": Array [],
-      "className": "cheeseContainer",
+      "addFaveCheese": [Function],
+      "cheeses": Array [
+        Object {
+          "id": 6,
+          "name": "nacho",
+          "picture": "none",
+        },
+        Object {
+          "id": 5,
+          "name": "swiss",
+          "picture": "none",
+        },
+      ],
+      "deleteCheese": [Function],
+      "favorites": Array [
+        Object {
+          "id": 6,
+          "name": "nacho",
+          "picture": "none",
+        },
+      ],
+      "handleFetch": [Function],
+      "isDuplicate": [Function],
     },
     "ref": null,
-    "rendered": Array [],
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
+    "rendered": Object {
+      "instance": <div
+        class="cheeseContainer"
+/>,
       "key": undefined,
       "nodeType": "host",
       "props": Object {
@@ -57,8 +1132,1112 @@ ShallowWrapper {
         "className": "cheeseContainer",
       },
       "ref": null,
-      "rendered": Array [],
+      "rendered": Array [
+        Array [],
+      ],
       "type": "div",
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": Favorites {
+        "_reactInternalFiber": FiberNode {
+          "_debugID": 5,
+          "_debugIsCurrentlyTiming": false,
+          "_debugOwner": FiberNode {
+            "_debugID": 4,
+            "_debugIsCurrentlyTiming": false,
+            "_debugOwner": null,
+            "_debugSource": null,
+            "actualDuration": 0,
+            "actualStartTime": 0,
+            "alternate": null,
+            "child": [Circular],
+            "effectTag": 1,
+            "expirationTime": 0,
+            "firstEffect": null,
+            "index": 0,
+            "key": null,
+            "lastEffect": null,
+            "memoizedProps": Object {
+              "Component": [Function],
+              "context": null,
+              "props": Object {
+                "addFaveCheese": [Function],
+                "cheeses": Array [
+                  Object {
+                    "id": 6,
+                    "name": "nacho",
+                    "picture": "none",
+                  },
+                  Object {
+                    "id": 5,
+                    "name": "swiss",
+                    "picture": "none",
+                  },
+                ],
+                "deleteCheese": [Function],
+                "favorites": Array [
+                  Object {
+                    "id": 6,
+                    "name": "nacho",
+                    "picture": "none",
+                  },
+                ],
+                "handleFetch": [Function],
+                "isDuplicate": [Function],
+              },
+            },
+            "memoizedState": Object {
+              "context": null,
+              "mount": true,
+              "props": Object {
+                "addFaveCheese": [Function],
+                "cheeses": Array [
+                  Object {
+                    "id": 6,
+                    "name": "nacho",
+                    "picture": "none",
+                  },
+                  Object {
+                    "id": 5,
+                    "name": "swiss",
+                    "picture": "none",
+                  },
+                ],
+                "deleteCheese": [Function],
+                "favorites": Array [
+                  Object {
+                    "id": 6,
+                    "name": "nacho",
+                    "picture": "none",
+                  },
+                ],
+                "handleFetch": [Function],
+                "isDuplicate": [Function],
+              },
+            },
+            "mode": 0,
+            "nextEffect": null,
+            "pendingProps": Object {
+              "Component": [Function],
+              "context": null,
+              "props": Object {
+                "addFaveCheese": [Function],
+                "cheeses": Array [
+                  Object {
+                    "id": 6,
+                    "name": "nacho",
+                    "picture": "none",
+                  },
+                  Object {
+                    "id": 5,
+                    "name": "swiss",
+                    "picture": "none",
+                  },
+                ],
+                "deleteCheese": [Function],
+                "favorites": Array [
+                  Object {
+                    "id": 6,
+                    "name": "nacho",
+                    "picture": "none",
+                  },
+                ],
+                "handleFetch": [Function],
+                "isDuplicate": [Function],
+              },
+            },
+            "ref": null,
+            "return": FiberNode {
+              "_debugID": 1,
+              "_debugIsCurrentlyTiming": false,
+              "_debugOwner": null,
+              "_debugSource": null,
+              "actualDuration": 0,
+              "actualStartTime": 0,
+              "alternate": FiberNode {
+                "_debugID": 1,
+                "_debugIsCurrentlyTiming": false,
+                "_debugOwner": null,
+                "_debugSource": null,
+                "actualDuration": 0,
+                "actualStartTime": 0,
+                "alternate": [Circular],
+                "child": null,
+                "effectTag": 0,
+                "expirationTime": 1,
+                "firstEffect": null,
+                "index": 0,
+                "key": null,
+                "lastEffect": null,
+                "memoizedProps": null,
+                "memoizedState": null,
+                "mode": 0,
+                "nextEffect": null,
+                "pendingProps": null,
+                "ref": null,
+                "return": null,
+                "selfBaseTime": 0,
+                "sibling": null,
+                "stateNode": Object {
+                  "containerInfo": <div>
+                    <div
+                                        class="cheeseContainer"
+                    />
+</div>,
+                  "context": Object {},
+                  "current": [Circular],
+                  "earliestPendingTime": 0,
+                  "earliestSuspendedTime": 0,
+                  "finishedWork": null,
+                  "firstBatch": null,
+                  "hydrate": false,
+                  "latestPendingTime": 0,
+                  "latestPingedTime": 0,
+                  "latestSuspendedTime": 0,
+                  "nextScheduledRoot": null,
+                  "pendingChildren": null,
+                  "pendingCommitExpirationTime": 0,
+                  "pendingContext": null,
+                  "remainingExpirationTime": 0,
+                },
+                "tag": 3,
+                "treeBaseTime": 0,
+                "type": null,
+                "updateQueue": Object {
+                  "baseState": null,
+                  "expirationTime": 1,
+                  "firstCapturedEffect": null,
+                  "firstCapturedUpdate": null,
+                  "firstEffect": null,
+                  "firstUpdate": Object {
+                    "callback": null,
+                    "expirationTime": 1,
+                    "next": null,
+                    "nextEffect": null,
+                    "payload": Object {
+                      "element": <WrapperComponent
+                        Component={[Function]}
+                        context={null}
+                        props={
+                                                Object {
+                                                                        "addFaveCheese": [Function],
+                                                                        "cheeses": Array [
+                                                                          Object {
+                                                                            "id": 6,
+                                                                            "name": "nacho",
+                                                                            "picture": "none",
+                                                                          },
+                                                                          Object {
+                                                                            "id": 5,
+                                                                            "name": "swiss",
+                                                                            "picture": "none",
+                                                                          },
+                                                                        ],
+                                                                        "deleteCheese": [Function],
+                                                                        "favorites": Array [
+                                                                          Object {
+                                                                            "id": 6,
+                                                                            "name": "nacho",
+                                                                            "picture": "none",
+                                                                          },
+                                                                        ],
+                                                                        "handleFetch": [Function],
+                                                                        "isDuplicate": [Function],
+                                                                      }
+                        }
+/>,
+                    },
+                    "tag": 0,
+                  },
+                  "lastCapturedEffect": null,
+                  "lastCapturedUpdate": null,
+                  "lastEffect": null,
+                  "lastUpdate": Object {
+                    "callback": null,
+                    "expirationTime": 1,
+                    "next": null,
+                    "nextEffect": null,
+                    "payload": Object {
+                      "element": <WrapperComponent
+                        Component={[Function]}
+                        context={null}
+                        props={
+                                                Object {
+                                                                        "addFaveCheese": [Function],
+                                                                        "cheeses": Array [
+                                                                          Object {
+                                                                            "id": 6,
+                                                                            "name": "nacho",
+                                                                            "picture": "none",
+                                                                          },
+                                                                          Object {
+                                                                            "id": 5,
+                                                                            "name": "swiss",
+                                                                            "picture": "none",
+                                                                          },
+                                                                        ],
+                                                                        "deleteCheese": [Function],
+                                                                        "favorites": Array [
+                                                                          Object {
+                                                                            "id": 6,
+                                                                            "name": "nacho",
+                                                                            "picture": "none",
+                                                                          },
+                                                                        ],
+                                                                        "handleFetch": [Function],
+                                                                        "isDuplicate": [Function],
+                                                                      }
+                        }
+/>,
+                    },
+                    "tag": 0,
+                  },
+                },
+              },
+              "child": [Circular],
+              "effectTag": 32,
+              "expirationTime": 0,
+              "firstEffect": [Circular],
+              "index": 0,
+              "key": null,
+              "lastEffect": [Circular],
+              "memoizedProps": null,
+              "memoizedState": Object {
+                "element": <WrapperComponent
+                  Component={[Function]}
+                  context={null}
+                  props={
+                                    Object {
+                                                      "addFaveCheese": [Function],
+                                                      "cheeses": Array [
+                                                        Object {
+                                                          "id": 6,
+                                                          "name": "nacho",
+                                                          "picture": "none",
+                                                        },
+                                                        Object {
+                                                          "id": 5,
+                                                          "name": "swiss",
+                                                          "picture": "none",
+                                                        },
+                                                      ],
+                                                      "deleteCheese": [Function],
+                                                      "favorites": Array [
+                                                        Object {
+                                                          "id": 6,
+                                                          "name": "nacho",
+                                                          "picture": "none",
+                                                        },
+                                                      ],
+                                                      "handleFetch": [Function],
+                                                      "isDuplicate": [Function],
+                                                    }
+                  }
+/>,
+              },
+              "mode": 0,
+              "nextEffect": null,
+              "pendingProps": null,
+              "ref": null,
+              "return": null,
+              "selfBaseTime": 0,
+              "sibling": null,
+              "stateNode": Object {
+                "containerInfo": <div>
+                  <div
+                                    class="cheeseContainer"
+                  />
+</div>,
+                "context": Object {},
+                "current": [Circular],
+                "earliestPendingTime": 0,
+                "earliestSuspendedTime": 0,
+                "finishedWork": null,
+                "firstBatch": null,
+                "hydrate": false,
+                "latestPendingTime": 0,
+                "latestPingedTime": 0,
+                "latestSuspendedTime": 0,
+                "nextScheduledRoot": null,
+                "pendingChildren": null,
+                "pendingCommitExpirationTime": 0,
+                "pendingContext": null,
+                "remainingExpirationTime": 0,
+              },
+              "tag": 3,
+              "treeBaseTime": 0,
+              "type": null,
+              "updateQueue": Object {
+                "baseState": Object {
+                  "element": <WrapperComponent
+                    Component={[Function]}
+                    context={null}
+                    props={
+                                        Object {
+                                                            "addFaveCheese": [Function],
+                                                            "cheeses": Array [
+                                                              Object {
+                                                                "id": 6,
+                                                                "name": "nacho",
+                                                                "picture": "none",
+                                                              },
+                                                              Object {
+                                                                "id": 5,
+                                                                "name": "swiss",
+                                                                "picture": "none",
+                                                              },
+                                                            ],
+                                                            "deleteCheese": [Function],
+                                                            "favorites": Array [
+                                                              Object {
+                                                                "id": 6,
+                                                                "name": "nacho",
+                                                                "picture": "none",
+                                                              },
+                                                            ],
+                                                            "handleFetch": [Function],
+                                                            "isDuplicate": [Function],
+                                                          }
+                    }
+/>,
+                },
+                "expirationTime": 0,
+                "firstCapturedEffect": null,
+                "firstCapturedUpdate": null,
+                "firstEffect": null,
+                "firstUpdate": null,
+                "lastCapturedEffect": null,
+                "lastCapturedUpdate": null,
+                "lastEffect": null,
+                "lastUpdate": null,
+              },
+            },
+            "selfBaseTime": 0,
+            "sibling": null,
+            "stateNode": WrapperComponent {
+              "_reactInternalFiber": [Circular],
+              "_reactInternalInstance": Object {},
+              "context": Object {},
+              "props": Object {
+                "Component": [Function],
+                "context": null,
+                "props": Object {
+                  "addFaveCheese": [Function],
+                  "cheeses": Array [
+                    Object {
+                      "id": 6,
+                      "name": "nacho",
+                      "picture": "none",
+                    },
+                    Object {
+                      "id": 5,
+                      "name": "swiss",
+                      "picture": "none",
+                    },
+                  ],
+                  "deleteCheese": [Function],
+                  "favorites": Array [
+                    Object {
+                      "id": 6,
+                      "name": "nacho",
+                      "picture": "none",
+                    },
+                  ],
+                  "handleFetch": [Function],
+                  "isDuplicate": [Function],
+                },
+              },
+              "refs": Object {},
+              "state": Object {
+                "context": null,
+                "mount": true,
+                "props": Object {
+                  "addFaveCheese": [Function],
+                  "cheeses": Array [
+                    Object {
+                      "id": 6,
+                      "name": "nacho",
+                      "picture": "none",
+                    },
+                    Object {
+                      "id": 5,
+                      "name": "swiss",
+                      "picture": "none",
+                    },
+                  ],
+                  "deleteCheese": [Function],
+                  "favorites": Array [
+                    Object {
+                      "id": 6,
+                      "name": "nacho",
+                      "picture": "none",
+                    },
+                  ],
+                  "handleFetch": [Function],
+                  "isDuplicate": [Function],
+                },
+              },
+              "updater": Object {
+                "enqueueForceUpdate": [Function],
+                "enqueueReplaceState": [Function],
+                "enqueueSetState": [Function],
+                "isMounted": [Function],
+              },
+            },
+            "tag": 2,
+            "treeBaseTime": 0,
+            "type": [Function],
+            "updateQueue": null,
+          },
+          "_debugSource": null,
+          "actualDuration": 0,
+          "actualStartTime": 0,
+          "alternate": null,
+          "child": FiberNode {
+            "_debugID": 6,
+            "_debugIsCurrentlyTiming": false,
+            "_debugOwner": [Circular],
+            "_debugSource": Object {
+              "fileName": "/Users/marikaross/mod3/cheese-louise/cheese-louise/src/containers/Favorites/Favorites.js",
+              "lineNumber": 56,
+            },
+            "actualDuration": 0,
+            "actualStartTime": 0,
+            "alternate": null,
+            "child": null,
+            "effectTag": 0,
+            "expirationTime": 0,
+            "firstEffect": null,
+            "index": 0,
+            "key": null,
+            "lastEffect": null,
+            "memoizedProps": Object {
+              "children": Array [],
+              "className": "cheeseContainer",
+            },
+            "memoizedState": null,
+            "mode": 0,
+            "nextEffect": null,
+            "pendingProps": Object {
+              "children": Array [],
+              "className": "cheeseContainer",
+            },
+            "ref": null,
+            "return": [Circular],
+            "selfBaseTime": 0,
+            "sibling": null,
+            "stateNode": <div
+              class="cheeseContainer"
+/>,
+            "tag": 5,
+            "treeBaseTime": 0,
+            "type": "div",
+            "updateQueue": null,
+          },
+          "effectTag": 1,
+          "expirationTime": 0,
+          "firstEffect": null,
+          "index": 0,
+          "key": null,
+          "lastEffect": null,
+          "memoizedProps": Object {
+            "addFaveCheese": [Function],
+            "cheeses": Array [
+              Object {
+                "id": 6,
+                "name": "nacho",
+                "picture": "none",
+              },
+              Object {
+                "id": 5,
+                "name": "swiss",
+                "picture": "none",
+              },
+            ],
+            "deleteCheese": [Function],
+            "favorites": Array [
+              Object {
+                "id": 6,
+                "name": "nacho",
+                "picture": "none",
+              },
+            ],
+            "handleFetch": [Function],
+            "isDuplicate": [Function],
+          },
+          "memoizedState": null,
+          "mode": 0,
+          "nextEffect": null,
+          "pendingProps": Object {
+            "addFaveCheese": [Function],
+            "cheeses": Array [
+              Object {
+                "id": 6,
+                "name": "nacho",
+                "picture": "none",
+              },
+              Object {
+                "id": 5,
+                "name": "swiss",
+                "picture": "none",
+              },
+            ],
+            "deleteCheese": [Function],
+            "favorites": Array [
+              Object {
+                "id": 6,
+                "name": "nacho",
+                "picture": "none",
+              },
+            ],
+            "handleFetch": [Function],
+            "isDuplicate": [Function],
+          },
+          "ref": null,
+          "return": FiberNode {
+            "_debugID": 4,
+            "_debugIsCurrentlyTiming": false,
+            "_debugOwner": null,
+            "_debugSource": null,
+            "actualDuration": 0,
+            "actualStartTime": 0,
+            "alternate": null,
+            "child": [Circular],
+            "effectTag": 1,
+            "expirationTime": 0,
+            "firstEffect": null,
+            "index": 0,
+            "key": null,
+            "lastEffect": null,
+            "memoizedProps": Object {
+              "Component": [Function],
+              "context": null,
+              "props": Object {
+                "addFaveCheese": [Function],
+                "cheeses": Array [
+                  Object {
+                    "id": 6,
+                    "name": "nacho",
+                    "picture": "none",
+                  },
+                  Object {
+                    "id": 5,
+                    "name": "swiss",
+                    "picture": "none",
+                  },
+                ],
+                "deleteCheese": [Function],
+                "favorites": Array [
+                  Object {
+                    "id": 6,
+                    "name": "nacho",
+                    "picture": "none",
+                  },
+                ],
+                "handleFetch": [Function],
+                "isDuplicate": [Function],
+              },
+            },
+            "memoizedState": Object {
+              "context": null,
+              "mount": true,
+              "props": Object {
+                "addFaveCheese": [Function],
+                "cheeses": Array [
+                  Object {
+                    "id": 6,
+                    "name": "nacho",
+                    "picture": "none",
+                  },
+                  Object {
+                    "id": 5,
+                    "name": "swiss",
+                    "picture": "none",
+                  },
+                ],
+                "deleteCheese": [Function],
+                "favorites": Array [
+                  Object {
+                    "id": 6,
+                    "name": "nacho",
+                    "picture": "none",
+                  },
+                ],
+                "handleFetch": [Function],
+                "isDuplicate": [Function],
+              },
+            },
+            "mode": 0,
+            "nextEffect": null,
+            "pendingProps": Object {
+              "Component": [Function],
+              "context": null,
+              "props": Object {
+                "addFaveCheese": [Function],
+                "cheeses": Array [
+                  Object {
+                    "id": 6,
+                    "name": "nacho",
+                    "picture": "none",
+                  },
+                  Object {
+                    "id": 5,
+                    "name": "swiss",
+                    "picture": "none",
+                  },
+                ],
+                "deleteCheese": [Function],
+                "favorites": Array [
+                  Object {
+                    "id": 6,
+                    "name": "nacho",
+                    "picture": "none",
+                  },
+                ],
+                "handleFetch": [Function],
+                "isDuplicate": [Function],
+              },
+            },
+            "ref": null,
+            "return": FiberNode {
+              "_debugID": 1,
+              "_debugIsCurrentlyTiming": false,
+              "_debugOwner": null,
+              "_debugSource": null,
+              "actualDuration": 0,
+              "actualStartTime": 0,
+              "alternate": FiberNode {
+                "_debugID": 1,
+                "_debugIsCurrentlyTiming": false,
+                "_debugOwner": null,
+                "_debugSource": null,
+                "actualDuration": 0,
+                "actualStartTime": 0,
+                "alternate": [Circular],
+                "child": null,
+                "effectTag": 0,
+                "expirationTime": 1,
+                "firstEffect": null,
+                "index": 0,
+                "key": null,
+                "lastEffect": null,
+                "memoizedProps": null,
+                "memoizedState": null,
+                "mode": 0,
+                "nextEffect": null,
+                "pendingProps": null,
+                "ref": null,
+                "return": null,
+                "selfBaseTime": 0,
+                "sibling": null,
+                "stateNode": Object {
+                  "containerInfo": <div>
+                    <div
+                                        class="cheeseContainer"
+                    />
+</div>,
+                  "context": Object {},
+                  "current": [Circular],
+                  "earliestPendingTime": 0,
+                  "earliestSuspendedTime": 0,
+                  "finishedWork": null,
+                  "firstBatch": null,
+                  "hydrate": false,
+                  "latestPendingTime": 0,
+                  "latestPingedTime": 0,
+                  "latestSuspendedTime": 0,
+                  "nextScheduledRoot": null,
+                  "pendingChildren": null,
+                  "pendingCommitExpirationTime": 0,
+                  "pendingContext": null,
+                  "remainingExpirationTime": 0,
+                },
+                "tag": 3,
+                "treeBaseTime": 0,
+                "type": null,
+                "updateQueue": Object {
+                  "baseState": null,
+                  "expirationTime": 1,
+                  "firstCapturedEffect": null,
+                  "firstCapturedUpdate": null,
+                  "firstEffect": null,
+                  "firstUpdate": Object {
+                    "callback": null,
+                    "expirationTime": 1,
+                    "next": null,
+                    "nextEffect": null,
+                    "payload": Object {
+                      "element": <WrapperComponent
+                        Component={[Function]}
+                        context={null}
+                        props={
+                                                Object {
+                                                                        "addFaveCheese": [Function],
+                                                                        "cheeses": Array [
+                                                                          Object {
+                                                                            "id": 6,
+                                                                            "name": "nacho",
+                                                                            "picture": "none",
+                                                                          },
+                                                                          Object {
+                                                                            "id": 5,
+                                                                            "name": "swiss",
+                                                                            "picture": "none",
+                                                                          },
+                                                                        ],
+                                                                        "deleteCheese": [Function],
+                                                                        "favorites": Array [
+                                                                          Object {
+                                                                            "id": 6,
+                                                                            "name": "nacho",
+                                                                            "picture": "none",
+                                                                          },
+                                                                        ],
+                                                                        "handleFetch": [Function],
+                                                                        "isDuplicate": [Function],
+                                                                      }
+                        }
+/>,
+                    },
+                    "tag": 0,
+                  },
+                  "lastCapturedEffect": null,
+                  "lastCapturedUpdate": null,
+                  "lastEffect": null,
+                  "lastUpdate": Object {
+                    "callback": null,
+                    "expirationTime": 1,
+                    "next": null,
+                    "nextEffect": null,
+                    "payload": Object {
+                      "element": <WrapperComponent
+                        Component={[Function]}
+                        context={null}
+                        props={
+                                                Object {
+                                                                        "addFaveCheese": [Function],
+                                                                        "cheeses": Array [
+                                                                          Object {
+                                                                            "id": 6,
+                                                                            "name": "nacho",
+                                                                            "picture": "none",
+                                                                          },
+                                                                          Object {
+                                                                            "id": 5,
+                                                                            "name": "swiss",
+                                                                            "picture": "none",
+                                                                          },
+                                                                        ],
+                                                                        "deleteCheese": [Function],
+                                                                        "favorites": Array [
+                                                                          Object {
+                                                                            "id": 6,
+                                                                            "name": "nacho",
+                                                                            "picture": "none",
+                                                                          },
+                                                                        ],
+                                                                        "handleFetch": [Function],
+                                                                        "isDuplicate": [Function],
+                                                                      }
+                        }
+/>,
+                    },
+                    "tag": 0,
+                  },
+                },
+              },
+              "child": [Circular],
+              "effectTag": 32,
+              "expirationTime": 0,
+              "firstEffect": [Circular],
+              "index": 0,
+              "key": null,
+              "lastEffect": [Circular],
+              "memoizedProps": null,
+              "memoizedState": Object {
+                "element": <WrapperComponent
+                  Component={[Function]}
+                  context={null}
+                  props={
+                                    Object {
+                                                      "addFaveCheese": [Function],
+                                                      "cheeses": Array [
+                                                        Object {
+                                                          "id": 6,
+                                                          "name": "nacho",
+                                                          "picture": "none",
+                                                        },
+                                                        Object {
+                                                          "id": 5,
+                                                          "name": "swiss",
+                                                          "picture": "none",
+                                                        },
+                                                      ],
+                                                      "deleteCheese": [Function],
+                                                      "favorites": Array [
+                                                        Object {
+                                                          "id": 6,
+                                                          "name": "nacho",
+                                                          "picture": "none",
+                                                        },
+                                                      ],
+                                                      "handleFetch": [Function],
+                                                      "isDuplicate": [Function],
+                                                    }
+                  }
+/>,
+              },
+              "mode": 0,
+              "nextEffect": null,
+              "pendingProps": null,
+              "ref": null,
+              "return": null,
+              "selfBaseTime": 0,
+              "sibling": null,
+              "stateNode": Object {
+                "containerInfo": <div>
+                  <div
+                                    class="cheeseContainer"
+                  />
+</div>,
+                "context": Object {},
+                "current": [Circular],
+                "earliestPendingTime": 0,
+                "earliestSuspendedTime": 0,
+                "finishedWork": null,
+                "firstBatch": null,
+                "hydrate": false,
+                "latestPendingTime": 0,
+                "latestPingedTime": 0,
+                "latestSuspendedTime": 0,
+                "nextScheduledRoot": null,
+                "pendingChildren": null,
+                "pendingCommitExpirationTime": 0,
+                "pendingContext": null,
+                "remainingExpirationTime": 0,
+              },
+              "tag": 3,
+              "treeBaseTime": 0,
+              "type": null,
+              "updateQueue": Object {
+                "baseState": Object {
+                  "element": <WrapperComponent
+                    Component={[Function]}
+                    context={null}
+                    props={
+                                        Object {
+                                                            "addFaveCheese": [Function],
+                                                            "cheeses": Array [
+                                                              Object {
+                                                                "id": 6,
+                                                                "name": "nacho",
+                                                                "picture": "none",
+                                                              },
+                                                              Object {
+                                                                "id": 5,
+                                                                "name": "swiss",
+                                                                "picture": "none",
+                                                              },
+                                                            ],
+                                                            "deleteCheese": [Function],
+                                                            "favorites": Array [
+                                                              Object {
+                                                                "id": 6,
+                                                                "name": "nacho",
+                                                                "picture": "none",
+                                                              },
+                                                            ],
+                                                            "handleFetch": [Function],
+                                                            "isDuplicate": [Function],
+                                                          }
+                    }
+/>,
+                },
+                "expirationTime": 0,
+                "firstCapturedEffect": null,
+                "firstCapturedUpdate": null,
+                "firstEffect": null,
+                "firstUpdate": null,
+                "lastCapturedEffect": null,
+                "lastCapturedUpdate": null,
+                "lastEffect": null,
+                "lastUpdate": null,
+              },
+            },
+            "selfBaseTime": 0,
+            "sibling": null,
+            "stateNode": WrapperComponent {
+              "_reactInternalFiber": [Circular],
+              "_reactInternalInstance": Object {},
+              "context": Object {},
+              "props": Object {
+                "Component": [Function],
+                "context": null,
+                "props": Object {
+                  "addFaveCheese": [Function],
+                  "cheeses": Array [
+                    Object {
+                      "id": 6,
+                      "name": "nacho",
+                      "picture": "none",
+                    },
+                    Object {
+                      "id": 5,
+                      "name": "swiss",
+                      "picture": "none",
+                    },
+                  ],
+                  "deleteCheese": [Function],
+                  "favorites": Array [
+                    Object {
+                      "id": 6,
+                      "name": "nacho",
+                      "picture": "none",
+                    },
+                  ],
+                  "handleFetch": [Function],
+                  "isDuplicate": [Function],
+                },
+              },
+              "refs": Object {},
+              "state": Object {
+                "context": null,
+                "mount": true,
+                "props": Object {
+                  "addFaveCheese": [Function],
+                  "cheeses": Array [
+                    Object {
+                      "id": 6,
+                      "name": "nacho",
+                      "picture": "none",
+                    },
+                    Object {
+                      "id": 5,
+                      "name": "swiss",
+                      "picture": "none",
+                    },
+                  ],
+                  "deleteCheese": [Function],
+                  "favorites": Array [
+                    Object {
+                      "id": 6,
+                      "name": "nacho",
+                      "picture": "none",
+                    },
+                  ],
+                  "handleFetch": [Function],
+                  "isDuplicate": [Function],
+                },
+              },
+              "updater": Object {
+                "enqueueForceUpdate": [Function],
+                "enqueueReplaceState": [Function],
+                "enqueueSetState": [Function],
+                "isMounted": [Function],
+              },
+            },
+            "tag": 2,
+            "treeBaseTime": 0,
+            "type": [Function],
+            "updateQueue": null,
+          },
+          "selfBaseTime": 0,
+          "sibling": null,
+          "stateNode": [Circular],
+          "tag": 2,
+          "treeBaseTime": 0,
+          "type": [Function],
+          "updateQueue": null,
+        },
+        "_reactInternalInstance": Object {},
+        "cheeseCards": [Function],
+        "context": Object {},
+        "faveCheeses": Array [],
+        "handleFetch": [Function],
+        "isDuplicate": [Function],
+        "props": Object {
+          "addFaveCheese": [Function],
+          "cheeses": Array [
+            Object {
+              "id": 6,
+              "name": "nacho",
+              "picture": "none",
+            },
+            Object {
+              "id": 5,
+              "name": "swiss",
+              "picture": "none",
+            },
+          ],
+          "deleteCheese": [Function],
+          "favorites": Array [
+            Object {
+              "id": 6,
+              "name": "nacho",
+              "picture": "none",
+            },
+          ],
+          "handleFetch": [Function],
+          "isDuplicate": [Function],
+        },
+        "refs": Object {},
+        "state": null,
+        "toggleFave": [Function],
+        "updater": Object {
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+        },
+      },
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "addFaveCheese": [Function],
+        "cheeses": Array [
+          Object {
+            "id": 6,
+            "name": "nacho",
+            "picture": "none",
+          },
+          Object {
+            "id": 5,
+            "name": "swiss",
+            "picture": "none",
+          },
+        ],
+        "deleteCheese": [Function],
+        "favorites": Array [
+          Object {
+            "id": 6,
+            "name": "nacho",
+            "picture": "none",
+          },
+        ],
+        "handleFetch": [Function],
+        "isDuplicate": [Function],
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": <div
+          class="cheeseContainer"
+/>,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [],
+          "className": "cheeseContainer",
+        },
+        "ref": null,
+        "rendered": Array [
+          Array [],
+        ],
+        "type": "div",
+      },
+      "type": [Function],
     },
   ],
   Symbol(enzyme.__options__): Object {

@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">66.67% </span>
+        <span class="strong">61.9% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>12/18</span>
+        <span class='fraction'>13/21</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">0% </span>
@@ -30,14 +30,14 @@
         <span class='fraction'>0/2</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">66.67% </span>
+        <span class="strong">64.29% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>8/12</span>
+        <span class='fraction'>9/14</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">66.67% </span>
+        <span class="strong">61.11% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>10/15</span>
+        <span class='fraction'>11/18</span>
       </div>
     </div>
     <p class="quiet">
@@ -121,7 +121,19 @@
 <a name='L73'></a><a href='#L73'>73</a>
 <a name='L74'></a><a href='#L74'>74</a>
 <a name='L75'></a><a href='#L75'>75</a>
-<a name='L76'></a><a href='#L76'>76</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -143,15 +155,19 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">18x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -167,7 +183,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -181,12 +200,15 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -201,52 +223,60 @@ import { CheeseCard } from '../../components/CheeseCard';
 import { connect } from 'react-redux';
 import { addFaveCheese, deleteCheese } from '../../actions';
 import PropTypes from 'prop-types';
+import { fetchSummary } from '../../thunks/fetchSummary';
 &nbsp;
 &nbsp;
 export class Favorites extends Component{
 &nbsp;
   toggleFave = <span class="fstat-no" title="function not covered" >(i</span>d) =&gt; {
-<span class="cstat-no" title="statement not covered" >    if(this.isDuplicate(id)) {</span>
-<span class="cstat-no" title="statement not covered" >      this.props.deleteCheese(id)</span>
+<span class="cstat-no" title="statement not covered" >    if (this.isDuplicate(id)) {</span>
+<span class="cstat-no" title="statement not covered" >      this.props.deleteCheese(id);</span>
     } else {
-<span class="cstat-no" title="statement not covered" >      this.props.addFaveCheese(id)</span>
+<span class="cstat-no" title="statement not covered" >      this.props.addFaveCheese(id);</span>
     }
   }
 &nbsp;
   isDuplicate = <span class="fstat-no" title="function not covered" >(i</span>d) =&gt; {
-<span class="cstat-no" title="statement not covered" >    return this.props.favorites.find(<span class="fstat-no" title="function not covered" >fa</span>voriteId =&gt; <span class="cstat-no" title="statement not covered" >favoriteId === id)</span></span>
+<span class="cstat-no" title="statement not covered" >    return this.props.favorites.find(<span class="fstat-no" title="function not covered" >fa</span>voriteId =&gt; <span class="cstat-no" title="statement not covered" >favoriteId === id)</span>;</span>
   }
 &nbsp;
-  faveCheeses = this.props.favorites.reduce((faveCheeses,favorite) =&gt; {
+  faveCheeses = this.props.favorites.reduce((faveCheeses, favorite) =&gt; {
     const allCheese = this.props.cheeses.filter(cheese =&gt; {
-      return cheese.cheeseId === favorite
-    })
-    return [...faveCheeses, ...allCheese]
-  },[])
+      return cheese.cheeseId === favorite;
+    });
+    return [...faveCheeses, ...allCheese];
+  }, [])
 &nbsp;
+  handleFetch = <span class="fstat-no" title="function not covered" >as</span>ync (id, urlSnippet) =&gt; {
+    const url = <span class="cstat-no" title="statement not covered" >`https://fr.wikipedia.org/w/api.php?action=opensearch&amp;search=${urlSnippet}&amp;limit=2&amp;format=json`;</span>
+<span class="cstat-no" title="statement not covered" >    await this.props.fetchSummary(url, id);</span>
+  }
 &nbsp;
-&nbsp;
-  cheeseCards = () =&gt; {return this.faveCheeses.map(<span class="fstat-no" title="function not covered" >ch</span>eese =&gt; {
-<span class="cstat-no" title="statement not covered" >    return (</span>
-      &lt;CheeseCard classname='CheeseCard'
-        name={cheese.name}
-        milk={cheese.milk}
-        region={cheese.region}
-        id={cheese.cheeseId}
-        toggleFave={this.toggleFave}
-        picture={cheese.picture}
-        favorites={this.props.favorites}
+  cheeseCards = () =&gt; {
+    return this.faveCheeses.map(<span class="fstat-no" title="function not covered" >ch</span>eese =&gt; {
+<span class="cstat-no" title="statement not covered" >      return (</span>
+        &lt;CheeseCard classname='CheeseCard'
+          key={cheese.cheeseId}
+          name={cheese.name}
+          milk={cheese.milk}
+          region={cheese.region}
+          id={cheese.cheeseId}
+          toggleFave={this.toggleFave}
+          picture={cheese.picture}
+          favorites={this.props.favorites}
+          picture={cheese.picture}
+          handleFetch={this.handleFetch}
         /&gt;
-      )
-  })
-}
+      );
+    });
+  }
 &nbsp;
   render() {
     return (
       &lt;div className="cheeseContainer"&gt;
         {this.cheeseCards()}
       &lt;/div&gt;
-      ) 
+    ) ;
   }
 &nbsp;
 }
@@ -254,12 +284,13 @@ export class Favorites extends Component{
 export const mapStateToProps = (state) =&gt; ({
   cheeses: state.cheeses,
   favorites: state.favorites
-})
+});
 &nbsp;
 export const mapDispatchToProps = (dispatch) =&gt; ({
   deleteCheese: (id) =&gt; dispatch(deleteCheese(id)),
-  addFaveCheese: (id) =&gt; dispatch(addFaveCheese(id))
-})
+  addFaveCheese: (id) =&gt; dispatch(addFaveCheese(id)),
+  fetchSummary: (summary, id) =&gt; dispatch(fetchSummary(summary, id))
+});
 &nbsp;
 Favorites.propTypes = {
   id: PropTypes.string,
@@ -267,9 +298,11 @@ Favorites.propTypes = {
   name: PropTypes.string,
   milk: PropTypes.string,
   region: PropTypes.string,
-  favorites: PropTypes.array
-&nbsp;
-}
+  favorites: PropTypes.array,
+  addFaveCheese: PropTypes.func,
+  deleteCheese:PropTypes.func,
+  cheeses: PropTypes.array
+};
 &nbsp;
 export default connect(mapStateToProps, mapDispatchToProps)(Favorites);</pre></td></tr>
 </table></pre>
@@ -277,7 +310,7 @@ export default connect(mapStateToProps, mapDispatchToProps)(Favorites);</pre></t
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Jul 31 2018 17:25:40 GMT-0600 (MDT)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Aug 01 2018 09:29:35 GMT-0600 (MDT)
 </div>
 </div>
 <script src="../../prettify.js"></script>
