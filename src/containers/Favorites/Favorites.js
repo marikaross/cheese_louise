@@ -3,6 +3,7 @@ import { CheeseCard } from '../../components/CheeseCard';
 import { connect } from 'react-redux';
 import { addFaveCheese, deleteCheese } from '../../actions';
 import PropTypes from 'prop-types';
+import { fetchSummary } from '../../thunks/fetchSummary';
 
 
 export class Favorites extends Component{
@@ -26,7 +27,10 @@ export class Favorites extends Component{
     return [...faveCheeses, ...allCheese];
   }, [])
 
-
+    handleFetch = async (id, urlSnippet) => {
+    const url = `https://fr.wikipedia.org/w/api.php?action=opensearch&search=${urlSnippet}&limit=2&format=json`;
+    await this.props.fetchSummary(url, id);
+  }
 
   cheeseCards = () => {
     return this.faveCheeses.map(cheese => {
@@ -40,6 +44,8 @@ export class Favorites extends Component{
           toggleFave={this.toggleFave}
           picture={cheese.picture}
           favorites={this.props.favorites}
+          picture={cheese.picture}
+          handleFetch={this.handleFetch}
         />
       );
     });
@@ -62,7 +68,8 @@ export const mapStateToProps = (state) => ({
 
 export const mapDispatchToProps = (dispatch) => ({
   deleteCheese: (id) => dispatch(deleteCheese(id)),
-  addFaveCheese: (id) => dispatch(addFaveCheese(id))
+  addFaveCheese: (id) => dispatch(addFaveCheese(id)),
+  fetchSummary: (summary, id) => dispatch(fetchSummary(summary, id))
 });
 
 Favorites.propTypes = {
