@@ -4,7 +4,7 @@ exports[`Favorites should match the snapShot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Unknown
+  Symbol(enzyme.__unrendered__): <Favorites
     addFaveCheese={[Function]}
     cheeses={
         Array [
@@ -35,9 +35,31 @@ ShallowWrapper {
     "simulateEvent": [Function],
     "unmount": [Function],
   },
-  Symbol(enzyme.__node__): Array [],
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [],
+      "className": "cheeseContainer",
+    },
+    "ref": null,
+    "rendered": Array [],
+    "type": "div",
+  },
   Symbol(enzyme.__nodes__): Array [
-    Array [],
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [],
+        "className": "cheeseContainer",
+      },
+      "ref": null,
+      "rendered": Array [],
+      "type": "div",
+    },
   ],
   Symbol(enzyme.__options__): Object {
     "adapter": ReactSixteenAdapter {

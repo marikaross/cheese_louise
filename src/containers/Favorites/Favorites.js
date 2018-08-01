@@ -1,27 +1,26 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { CheeseCard } from '../../components/CheeseCard';
 import { connect } from 'react-redux';
 import { addFaveCheese, deleteCheese } from '../../actions';
 import PropTypes from 'prop-types';
-import './Favorites.css'
 
 
-export const Favorites = (props) => {
+export class Favorites extends Component{
 
-   const toggleFave = (id) => {
-    if(isDuplicate(id)) {
-      props.deleteCheese(id)
+  toggleFave = (id) => {
+    if(this.isDuplicate(id)) {
+      this.props.deleteCheese(id)
     } else {
-      props.addFaveCheese(id)
+      this.props.addFaveCheese(id)
     }
   }
 
-   const isDuplicate = (id) => {
-    return props.favorites.find(favoriteId => favoriteId === id)
+  isDuplicate = (id) => {
+    return this.props.favorites.find(favoriteId => favoriteId === id)
   }
 
-  const faveCheeses = props.favorites.reduce((faveCheeses,favorite) => {
-    const allCheese = props.cheeses.filter(cheese => {
+  faveCheeses = this.props.favorites.reduce((faveCheeses,favorite) => {
+    const allCheese = this.props.cheeses.filter(cheese => {
       return cheese.cheeseId === favorite
     })
     return [...faveCheeses, ...allCheese]
@@ -29,22 +28,28 @@ export const Favorites = (props) => {
 
 
 
-  const cheeseCards = faveCheeses.map(cheese => {
+  cheeseCards = () => {return this.faveCheeses.map(cheese => {
     return (
-      <CheeseCard
+      <CheeseCard classname='CheeseCard'
         name={cheese.name}
         milk={cheese.milk}
         region={cheese.region}
         id={cheese.cheeseId}
-        toggleFave={toggleFave}
+        toggleFave={this.toggleFave}
         picture={cheese.picture}
+        favorites={this.props.favorites}
         />
       )
   })
+}
 
-  return (
-    (cheeseCards)
-    )
+  render() {
+    return (
+      <div className="cheeseContainer">
+        {this.cheeseCards()}
+      </div>
+      ) 
+  }
 
 }
 
@@ -64,6 +69,7 @@ Favorites.propTypes = {
   name: PropTypes.string,
   milk: PropTypes.string,
   region: PropTypes.string,
+  favorites: PropTypes.array
 
 }
 

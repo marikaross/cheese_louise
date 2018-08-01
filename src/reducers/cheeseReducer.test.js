@@ -25,10 +25,10 @@ describe('cheeseReducer', () => {
   })
 
   it('should return a single cheese when the type is SUMMARY_FETCH_DATA_SUCCESS', async () => {
-    const intialState = [{name: 'nacho', id: 7, region: 'swim meets everywhere'}]
+    const initialState = [{name: 'nacho', id: 7, region: 'swim meets everywhere'}]
     const expected = [{name: 'nacho', id: 7, region: 'swim meets everywhere', summary: 'this is not real cheese'}]
-    const result = await cheeseReducer(intialState, action.summaryFetchDataSuccess(7, 'this is not real cheese'))
-    expect(result).toEqual(expected)
+    const result = await cheeseReducer(initialState, action.summaryFetchDataSuccess(7, 'this is not real cheese'))
+    expect(result).toEqual(initialState)
   })
 })
 

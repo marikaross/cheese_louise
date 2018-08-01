@@ -4,7 +4,15 @@ exports[`CheeseCard should match the snapShot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Unknown />,
+  Symbol(enzyme.__unrendered__): <Unknown
+    favorites={
+        Array [
+            Object {},
+            Object {},
+          ]
+    }
+    picture="photo of cheese"
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -17,164 +25,110 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": Array [
-        <img
-          className="cheese-image"
-          src="https://public.opendatasoft.com/explore/dataset/frenchcheese/files/undefined/300/"
-/>,
-        <section
-          className="cheese-info"
+      "children": <div
+        className="overlay"
 >
-          <h2 />
-          <button
-                    className="fave-button"
-                    onClick={[Function]}
-          >
-                    favorite
-          </button>
-          <Link
-                    className="details-link"
-                    onClick={[Function]}
-                    replace={false}
-                    to="/undefined"
-          >
-                    See more info
-          </Link>
-</section>,
-      ],
+        <Link
+                className="details-link"
+                onClick={[Function]}
+                replace={false}
+                to="/undefined"
+        >
+                <img
+                        className="cheese-image"
+                        src="https://public.opendatasoft.com/explore/dataset/frenchcheese/files/photo of cheese/300/"
+                />
+        </Link>
+        <section
+                className="cheese-info"
+        >
+                <Link
+                        className="details-link"
+                        onClick={[Function]}
+                        replace={false}
+                        to="/undefined"
+                >
+                        <h2 />
+                </Link>
+                <button
+                        className="fave-button"
+                        onClick={[Function]}
+                >
+                        Favorite
+                </button>
+        </section>
+</div>,
       "className": "CheeseCard",
     },
     "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "className": "cheese-image",
-          "src": "https://public.opendatasoft.com/explore/dataset/frenchcheese/files/undefined/300/",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "img",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <h2 />,
-            <button
-              className="fave-button"
-              onClick={[Function]}
->
-              favorite
-</button>,
-            <Link
-              className="details-link"
-              onClick={[Function]}
-              replace={false}
-              to="/undefined"
->
-              See more info
-</Link>,
-          ],
-          "className": "cheese-info",
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": undefined,
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "h2",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "favorite",
-              "className": "fave-button",
-              "onClick": [Function],
-            },
-            "ref": null,
-            "rendered": "favorite",
-            "type": "button",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "children": "See more info",
-              "className": "details-link",
-              "onClick": [Function],
-              "replace": false,
-              "to": "/undefined",
-            },
-            "ref": null,
-            "rendered": "See more info",
-            "type": [Function],
-          },
-        ],
-        "type": "section",
-      },
-    ],
-    "type": "article",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
+    "rendered": Object {
       "instance": null,
       "key": undefined,
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <img
-            className="cheese-image"
-            src="https://public.opendatasoft.com/explore/dataset/frenchcheese/files/undefined/300/"
-/>,
+          <Link
+            className="details-link"
+            onClick={[Function]}
+            replace={false}
+            to="/undefined"
+>
+            <img
+                        className="cheese-image"
+                        src="https://public.opendatasoft.com/explore/dataset/frenchcheese/files/photo of cheese/300/"
+            />
+</Link>,
           <section
             className="cheese-info"
 >
-            <h2 />
-            <button
-                        className="fave-button"
-                        onClick={[Function]}
-            >
-                        favorite
-            </button>
             <Link
                         className="details-link"
                         onClick={[Function]}
                         replace={false}
                         to="/undefined"
             >
-                        See more info
+                        <h2 />
             </Link>
+            <button
+                        className="fave-button"
+                        onClick={[Function]}
+            >
+                        Favorite
+            </button>
 </section>,
         ],
-        "className": "CheeseCard",
+        "className": "overlay",
       },
       "ref": null,
       "rendered": Array [
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "host",
+          "nodeType": "class",
           "props": Object {
-            "className": "cheese-image",
-            "src": "https://public.opendatasoft.com/explore/dataset/frenchcheese/files/undefined/300/",
+            "children": <img
+              className="cheese-image"
+              src="https://public.opendatasoft.com/explore/dataset/frenchcheese/files/photo of cheese/300/"
+/>,
+            "className": "details-link",
+            "onClick": [Function],
+            "replace": false,
+            "to": "/undefined",
           },
           "ref": null,
-          "rendered": null,
-          "type": "img",
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "cheese-image",
+              "src": "https://public.opendatasoft.com/explore/dataset/frenchcheese/files/photo of cheese/300/",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          "type": [Function],
         },
         Object {
           "instance": null,
@@ -182,21 +136,20 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <h2 />,
-              <button
-                className="fave-button"
-                onClick={[Function]}
->
-                favorite
-</button>,
               <Link
                 className="details-link"
                 onClick={[Function]}
                 replace={false}
                 to="/undefined"
 >
-                See more info
+                <h2 />
 </Link>,
+              <button
+                className="fave-button"
+                onClick={[Function]}
+>
+                Favorite
+</button>,
             ],
             "className": "cheese-info",
           },
@@ -205,46 +158,229 @@ ShallowWrapper {
             Object {
               "instance": null,
               "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": undefined,
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "h2",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "favorite",
-                "className": "fave-button",
-                "onClick": [Function],
-              },
-              "ref": null,
-              "rendered": "favorite",
-              "type": "button",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "children": "See more info",
+                "children": <h2 />,
                 "className": "details-link",
                 "onClick": [Function],
                 "replace": false,
                 "to": "/undefined",
               },
               "ref": null,
-              "rendered": "See more info",
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": undefined,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "h2",
+              },
               "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Favorite",
+                "className": "fave-button",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Favorite",
+              "type": "button",
             },
           ],
           "type": "section",
         },
       ],
+      "type": "div",
+    },
+    "type": "article",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="overlay"
+>
+          <Link
+                    className="details-link"
+                    onClick={[Function]}
+                    replace={false}
+                    to="/undefined"
+          >
+                    <img
+                              className="cheese-image"
+                              src="https://public.opendatasoft.com/explore/dataset/frenchcheese/files/photo of cheese/300/"
+                    />
+          </Link>
+          <section
+                    className="cheese-info"
+          >
+                    <Link
+                              className="details-link"
+                              onClick={[Function]}
+                              replace={false}
+                              to="/undefined"
+                    >
+                              <h2 />
+                    </Link>
+                    <button
+                              className="fave-button"
+                              onClick={[Function]}
+                    >
+                              Favorite
+                    </button>
+          </section>
+</div>,
+        "className": "CheeseCard",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <Link
+              className="details-link"
+              onClick={[Function]}
+              replace={false}
+              to="/undefined"
+>
+              <img
+                            className="cheese-image"
+                            src="https://public.opendatasoft.com/explore/dataset/frenchcheese/files/photo of cheese/300/"
+              />
+</Link>,
+            <section
+              className="cheese-info"
+>
+              <Link
+                            className="details-link"
+                            onClick={[Function]}
+                            replace={false}
+                            to="/undefined"
+              >
+                            <h2 />
+              </Link>
+              <button
+                            className="fave-button"
+                            onClick={[Function]}
+              >
+                            Favorite
+              </button>
+</section>,
+          ],
+          "className": "overlay",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": <img
+                className="cheese-image"
+                src="https://public.opendatasoft.com/explore/dataset/frenchcheese/files/photo of cheese/300/"
+/>,
+              "className": "details-link",
+              "onClick": [Function],
+              "replace": false,
+              "to": "/undefined",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "cheese-image",
+                "src": "https://public.opendatasoft.com/explore/dataset/frenchcheese/files/photo of cheese/300/",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <Link
+                  className="details-link"
+                  onClick={[Function]}
+                  replace={false}
+                  to="/undefined"
+>
+                  <h2 />
+</Link>,
+                <button
+                  className="fave-button"
+                  onClick={[Function]}
+>
+                  Favorite
+</button>,
+              ],
+              "className": "cheese-info",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": <h2 />,
+                  "className": "details-link",
+                  "onClick": [Function],
+                  "replace": false,
+                  "to": "/undefined",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": undefined,
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "h2",
+                },
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Favorite",
+                  "className": "fave-button",
+                  "onClick": [Function],
+                },
+                "ref": null,
+                "rendered": "Favorite",
+                "type": "button",
+              },
+            ],
+            "type": "section",
+          },
+        ],
+        "type": "div",
+      },
       "type": "article",
     },
   ],

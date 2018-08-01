@@ -5,7 +5,7 @@ import { shallow } from 'enzyme';
 describe('CheeseDetails', () => {
 
   it('should match the snapShot', () => {
-    let wrapper = shallow(<CheeseDetails />)
+    let wrapper = shallow(<CheeseDetails picture={'hi'}/>)
     expect(wrapper).toMatchSnapshot()
   })
 }) 
