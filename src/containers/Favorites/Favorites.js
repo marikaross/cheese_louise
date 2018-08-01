@@ -8,47 +8,49 @@ import PropTypes from 'prop-types';
 export class Favorites extends Component{
 
   toggleFave = (id) => {
-    if(this.isDuplicate(id)) {
-      this.props.deleteCheese(id)
+    if (this.isDuplicate(id)) {
+      this.props.deleteCheese(id);
     } else {
-      this.props.addFaveCheese(id)
+      this.props.addFaveCheese(id);
     }
   }
 
   isDuplicate = (id) => {
-    return this.props.favorites.find(favoriteId => favoriteId === id)
+    return this.props.favorites.find(favoriteId => favoriteId === id);
   }
 
-  faveCheeses = this.props.favorites.reduce((faveCheeses,favorite) => {
+  faveCheeses = this.props.favorites.reduce((faveCheeses, favorite) => {
     const allCheese = this.props.cheeses.filter(cheese => {
-      return cheese.cheeseId === favorite
-    })
-    return [...faveCheeses, ...allCheese]
-  },[])
+      return cheese.cheeseId === favorite;
+    });
+    return [...faveCheeses, ...allCheese];
+  }, [])
 
 
 
-  cheeseCards = () => {return this.faveCheeses.map(cheese => {
-    return (
-      <CheeseCard classname='CheeseCard'
-        name={cheese.name}
-        milk={cheese.milk}
-        region={cheese.region}
-        id={cheese.cheeseId}
-        toggleFave={this.toggleFave}
-        picture={cheese.picture}
-        favorites={this.props.favorites}
+  cheeseCards = () => {
+    return this.faveCheeses.map(cheese => {
+      return (
+        <CheeseCard classname='CheeseCard'
+          key={cheese.cheeseId}
+          name={cheese.name}
+          milk={cheese.milk}
+          region={cheese.region}
+          id={cheese.cheeseId}
+          toggleFave={this.toggleFave}
+          picture={cheese.picture}
+          favorites={this.props.favorites}
         />
-      )
-  })
-}
+      );
+    });
+  }
 
   render() {
     return (
       <div className="cheeseContainer">
         {this.cheeseCards()}
       </div>
-      ) 
+    ) ;
   }
 
 }
@@ -56,12 +58,12 @@ export class Favorites extends Component{
 export const mapStateToProps = (state) => ({
   cheeses: state.cheeses,
   favorites: state.favorites
-})
+});
 
 export const mapDispatchToProps = (dispatch) => ({
   deleteCheese: (id) => dispatch(deleteCheese(id)),
   addFaveCheese: (id) => dispatch(addFaveCheese(id))
-})
+});
 
 Favorites.propTypes = {
   id: PropTypes.string,
@@ -69,8 +71,10 @@ Favorites.propTypes = {
   name: PropTypes.string,
   milk: PropTypes.string,
   region: PropTypes.string,
-  favorites: PropTypes.array
-
-}
+  favorites: PropTypes.array,
+  addFaveCheese: PropTypes.func,
+  deleteCheese:PropTypes.func,
+  cheeses: PropTypes.array
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Favorites);
