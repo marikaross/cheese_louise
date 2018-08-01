@@ -19,145 +19,75 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": Array [
-        <img
-          className="cheese-image"
-          src="https://public.opendatasoft.com/explore/dataset/frenchcheese/files/hi/300/"
-/>,
-        <div
-          className="cheese-deets"
+      "children": <div
+        className="overlay-cheese"
 >
-          <h2 />
-          <h4 />
-          <h4 />
-          <h4 />
-          <Link
-                    replace={false}
-                    to="/"
-          >
-                    back
-          </Link>
+        <div
+                className="cheese-pic-div"
+        >
+                <img
+                        className="cheese-detail-image"
+                        src="https://public.opendatasoft.com/explore/dataset/frenchcheese/files/hi/300/"
+                />
+        </div>
+        <div
+                className="cheese-deets"
+        >
+                <h2
+                        className="detail-name"
+                />
+                <h4
+                        className="details"
+                />
+                <h4
+                        className="details"
+                >
+                        region 
+                </h4>
+                <h4 />
+                <Link
+                        className="back"
+                        replace={false}
+                        to="/"
+                >
+                        back
+                </Link>
+        </div>
 </div>,
-      ],
       "className": "cheese-details",
     },
     "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "className": "cheese-image",
-          "src": "https://public.opendatasoft.com/explore/dataset/frenchcheese/files/hi/300/",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "img",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <h2 />,
-            <h4 />,
-            <h4 />,
-            <h4 />,
-            <Link
-              replace={false}
-              to="/"
->
-              back
-</Link>,
-          ],
-          "className": "cheese-deets",
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": undefined,
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "h2",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": undefined,
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "h4",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": undefined,
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "h4",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": undefined,
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "h4",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "children": "back",
-              "replace": false,
-              "to": "/",
-            },
-            "ref": null,
-            "rendered": "back",
-            "type": [Function],
-          },
-        ],
-        "type": "div",
-      },
-    ],
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
+    "rendered": Object {
       "instance": null,
       "key": undefined,
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <img
-            className="cheese-image"
-            src="https://public.opendatasoft.com/explore/dataset/frenchcheese/files/hi/300/"
-/>,
+          <div
+            className="cheese-pic-div"
+>
+            <img
+                        className="cheese-detail-image"
+                        src="https://public.opendatasoft.com/explore/dataset/frenchcheese/files/hi/300/"
+            />
+</div>,
           <div
             className="cheese-deets"
 >
-            <h2 />
-            <h4 />
-            <h4 />
+            <h2
+                        className="detail-name"
+            />
+            <h4
+                        className="details"
+            />
+            <h4
+                        className="details"
+            >
+                        region 
+            </h4>
             <h4 />
             <Link
+                        className="back"
                         replace={false}
                         to="/"
             >
@@ -165,7 +95,7 @@ ShallowWrapper {
             </Link>
 </div>,
         ],
-        "className": "cheese-details",
+        "className": "overlay-cheese",
       },
       "ref": null,
       "rendered": Array [
@@ -174,12 +104,26 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "className": "cheese-image",
-            "src": "https://public.opendatasoft.com/explore/dataset/frenchcheese/files/hi/300/",
+            "children": <img
+              className="cheese-detail-image"
+              src="https://public.opendatasoft.com/explore/dataset/frenchcheese/files/hi/300/"
+/>,
+            "className": "cheese-pic-div",
           },
           "ref": null,
-          "rendered": null,
-          "type": "img",
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "cheese-detail-image",
+              "src": "https://public.opendatasoft.com/explore/dataset/frenchcheese/files/hi/300/",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          "type": "div",
         },
         Object {
           "instance": null,
@@ -187,11 +131,20 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <h2 />,
-              <h4 />,
-              <h4 />,
+              <h2
+                className="detail-name"
+/>,
+              <h4
+                className="details"
+/>,
+              <h4
+                className="details"
+>
+                region 
+</h4>,
               <h4 />,
               <Link
+                className="back"
                 replace={false}
                 to="/"
 >
@@ -208,6 +161,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": undefined,
+                "className": "detail-name",
               },
               "ref": null,
               "rendered": null,
@@ -219,6 +173,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": undefined,
+                "className": "details",
               },
               "ref": null,
               "rendered": null,
@@ -229,10 +184,17 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": undefined,
+                "children": Array [
+                  "region ",
+                  undefined,
+                ],
+                "className": "details",
               },
               "ref": null,
-              "rendered": null,
+              "rendered": Array [
+                "region ",
+                undefined,
+              ],
               "type": "h4",
             },
             Object {
@@ -252,6 +214,7 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "children": "back",
+                "className": "back",
                 "replace": false,
                 "to": "/",
               },
@@ -264,6 +227,225 @@ ShallowWrapper {
         },
       ],
       "type": "div",
+    },
+    "type": "section",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="overlay-cheese"
+>
+          <div
+                    className="cheese-pic-div"
+          >
+                    <img
+                              className="cheese-detail-image"
+                              src="https://public.opendatasoft.com/explore/dataset/frenchcheese/files/hi/300/"
+                    />
+          </div>
+          <div
+                    className="cheese-deets"
+          >
+                    <h2
+                              className="detail-name"
+                    />
+                    <h4
+                              className="details"
+                    />
+                    <h4
+                              className="details"
+                    >
+                              region 
+                    </h4>
+                    <h4 />
+                    <Link
+                              className="back"
+                              replace={false}
+                              to="/"
+                    >
+                              back
+                    </Link>
+          </div>
+</div>,
+        "className": "cheese-details",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="cheese-pic-div"
+>
+              <img
+                            className="cheese-detail-image"
+                            src="https://public.opendatasoft.com/explore/dataset/frenchcheese/files/hi/300/"
+              />
+</div>,
+            <div
+              className="cheese-deets"
+>
+              <h2
+                            className="detail-name"
+              />
+              <h4
+                            className="details"
+              />
+              <h4
+                            className="details"
+              >
+                            region 
+              </h4>
+              <h4 />
+              <Link
+                            className="back"
+                            replace={false}
+                            to="/"
+              >
+                            back
+              </Link>
+</div>,
+          ],
+          "className": "overlay-cheese",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <img
+                className="cheese-detail-image"
+                src="https://public.opendatasoft.com/explore/dataset/frenchcheese/files/hi/300/"
+/>,
+              "className": "cheese-pic-div",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "cheese-detail-image",
+                "src": "https://public.opendatasoft.com/explore/dataset/frenchcheese/files/hi/300/",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h2
+                  className="detail-name"
+/>,
+                <h4
+                  className="details"
+/>,
+                <h4
+                  className="details"
+>
+                  region 
+</h4>,
+                <h4 />,
+                <Link
+                  className="back"
+                  replace={false}
+                  to="/"
+>
+                  back
+</Link>,
+              ],
+              "className": "cheese-deets",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": undefined,
+                  "className": "detail-name",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "h2",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": undefined,
+                  "className": "details",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "h4",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    "region ",
+                    undefined,
+                  ],
+                  "className": "details",
+                },
+                "ref": null,
+                "rendered": Array [
+                  "region ",
+                  undefined,
+                ],
+                "type": "h4",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": undefined,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "h4",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "back",
+                  "className": "back",
+                  "replace": false,
+                  "to": "/",
+                },
+                "ref": null,
+                "rendered": "back",
+                "type": [Function],
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      "type": "section",
     },
   ],
   Symbol(enzyme.__options__): Object {
