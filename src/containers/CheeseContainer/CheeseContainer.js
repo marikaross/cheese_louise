@@ -73,7 +73,7 @@ CheeseContainer.propTypes = {
   addFaveCheese: PropTypes.func,
   fetchSummary: PropTypes.func,
   cheeses: PropTypes.array,
-  favorites: PropTypes.array
+  favorites: PropTypes.any
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(CheeseContainer);

@@ -35,7 +35,7 @@ describe('Favorites', () => {
     wrapper = shallow (
       <CheeseCard 
         cheeses={mockCheeses}
-        favorites={mockFavorites}
+
         addFaveCheese={mockAddFaveCheese}
         deleteCheese={mockDeleteCheese}
         toggleFave={mockToggleFave}

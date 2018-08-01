@@ -19,3 +19,4 @@ export const cheeseCleaner = (cheeseData) => {
 export const summaryCleaner = (summaryData) => {
   return summaryData[2][0]
 }
+

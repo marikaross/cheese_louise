@@ -93,3 +93,50 @@ export const mockSummaryData = [
     "https://en.wikipedia.org/wiki/Bee"
   ]
 ]
+
+export const singleCheeseData = {
+"nhits":338,
+"parameters":
+{
+  "dataset":[
+    "frenchcheese"
+  ],
+  "timezone":"UTC",
+  "rows":10,
+  "format":"json",
+  "facet":[
+    "id",
+    "cheese",
+    "milk"
+    ]
+  },
+"records":[
+  {
+  "datasetid":"frenchcheese",
+  "recordid":"55188f0706ca252277065bf8eb1393eec55cc090",
+  "fields":
+  {
+    "cheese":"Goat Milkton",
+    "french_page":"http://fr.wikipedia.org/wiki/Ch%C3%A8vreton",
+    "geo_point_2d":[ 1
+    ],
+  "milk":"Goat Milk",
+  "geo_shape":{
+    "type":"Polygon",
+    "coordinates":[
+    [1, 5, 6]
+    ]
+    },
+  "id":"Ardèche"
+  },
+  "geometry":{
+    "type":"Point",
+    "coordinates":[
+      4.425630966744431,
+      44.752618523961765
+      ]
+    },
+  "record_timestamp":"2016-09-20T22:29:57+00:00"
+  }
+  ]
+}
