@@ -14,9 +14,9 @@ import './App.css';
 
 export class App extends Component{
 
-   async componentDidMount() {
-    const url = 'https://data.opendatasoft.com/api/records/1.0/search/?dataset=frenchcheese%40public&facet=id&facet=cheese&facet=milk'
-    await this.props.fetchCheese(url)
+  async componentDidMount() {
+    const url = 'https://data.opendatasoft.com/api/records/1.0/search/?dataset=frenchcheese%40public&facet=id&facet=cheese&facet=milk';
+    await this.props.fetchCheese(url);
   }
   
 
@@ -29,15 +29,15 @@ export class App extends Component{
           <Route exact path='/favorites' component={Favorites} />
           <Route exact path='/:cheeseId' render={({ match }) => {
             const oneCheese = this.props.cheeses.find(cheese => {
-              return cheese.cheeseId === match.params.cheeseId
-            })
+              return cheese.cheeseId === match.params.cheeseId;
+            });
             return (
               <div>
                 <CheeseDetails {...oneCheese} />
               </div>
-              )
+            );
           }
-        } />
+          } />
         </Switch>
       </div>
     );
@@ -49,12 +49,12 @@ export const mapStateToProps = (state) => ({
   favorites: state.favorites,
   isLoading: state.isLoading,
   hasErrored: state.hasErrored
-})
+});
 
 export const mapDispatchToProps = (dispatch) => ({
   addCheese: (cheeses) => dispatch(addCheese(cheeses)), 
   fetchCheese: (url) => dispatch(fetchCheese(url))
-})
+});
 
 
 App.propTypes = {
@@ -64,6 +64,6 @@ App.propTypes = {
   hasErrored: PropTypes.bool,
   addCheese: PropTypes.func,
   fetchCheese: PropTypes.func
-}
+};
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App))
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));

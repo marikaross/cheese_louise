@@ -2,34 +2,34 @@ import React, { Component } from 'react';
 import { CheeseCard } from '../../components/CheeseCard';
 import { connect } from 'react-redux';
 import { addFaveCheese, deleteCheese } from '../../actions';
-import { Link } from 'react-router-dom';
 import './CheeseContainer.css';
 import { fetchSummary } from '../../thunks/fetchSummary';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 export class CheeseContainer extends Component{
 
   toggleFave = (id) => {
-    if(this.isDuplicate(id)) {
-      this.props.deleteCheese(id)
+    if (this.isDuplicate(id)) {
+      this.props.deleteCheese(id);
     } else {
-      this.props.addFaveCheese(id)
+      this.props.addFaveCheese(id);
     }
   }
 
   isDuplicate = (id) => {
-    return this.props.favorites.find(favoriteId => favoriteId === id)
+    return this.props.favorites.find(favoriteId => favoriteId === id);
   }
 
   handleFetch = async (id, urlSnippet) => {
-    const url = `https://fr.wikipedia.org/w/api.php?action=opensearch&search=${urlSnippet}&limit=2&format=json`
-    await this.props.fetchSummary(url, id)
+    const url = `https://fr.wikipedia.org/w/api.php?action=opensearch&search=${urlSnippet}&limit=2&format=json`;
+    await this.props.fetchSummary(url, id);
   }
 
 
 
-  cheeseCards = () => {return this.props.cheeses.map(cheese => {
-    return (
+  cheeseCards = () => {
+    return this.props.cheeses.map(cheese => {
+      return (
         <CheeseCard 
           key={cheese.cheeseId}
           name={cheese.name}
@@ -44,8 +44,8 @@ export class CheeseContainer extends Component{
           favorites={this.props.favorites}
         />
       ); 
-  })
-}
+    });
+  }
 
   render() {
 
@@ -53,20 +53,20 @@ export class CheeseContainer extends Component{
       <div className='cheeseContainer'>
         {this.cheeseCards()}
       </div>
-      ) 
+    ) ;
   }
 }
 
 export const mapStateToProps = (state) => ({
   cheeses: state.cheeses,
   favorites: state.favorites
-})
+});
 
 export const mapDispatchToProps = (dispatch) => ({
   deleteCheese: (id) => dispatch(deleteCheese(id)),
   addFaveCheese: (id) => dispatch(addFaveCheese(id)),
   fetchSummary: (summary, id) => dispatch(fetchSummary(summary, id))
-})
+});
 
 CheeseContainer.propTypes = {
   deleteCheese: PropTypes.func,
